@@ -1,0 +1,53 @@
+:root{}
+
+*{
+    margin-top: 0;
+    margin-left: 0;
+    border: 1px solid black;
+}
+
+.side-bar{
+    height: 100vh;
+    width: 30vw;
+    background-color: black;
+}
+
+.side-bar-item{
+    height: 30vh;
+    width:  28vw;
+    background-color: white;
+}
+
+.logo-container{
+    height: 15vh;
+    width: 28vw;
+    background-color: orange;
+}
+
+.logo-item{}
+
+.logo-icon{
+    height: 8vh;
+    width: 8vw;
+    background-color: purple;
+}
+
+.logo-text{
+    height: 8vh;
+    width: 12vw;
+}
+
+
+.menu-item{
+    height: 4vh;
+    width: 10vw;
+    background-color: green;
+}
+
+.option-item{
+    height: 4vh;
+    width: 10vw;
+    background-color: red;
+}
+
+
