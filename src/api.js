@@ -14,8 +14,12 @@ function dashBoard(){
             }; logoIcon()
 
             function logoText(){
-                const text = logo.appendChild(document.createElement("h2"));
-                text.setAttribute("class", "logo-item logo-text")
+                const textContainer = logo.appendChild(document.createElement("div"));
+                textContainer.setAttribute("class", "logo-item logo-text-container")
+
+
+                const text = textContainer.appendChild(document.createElement("h2"));
+                text.setAttribute("class", "logo-text-item logo-text")
                 text.textContent = "Technically Dashboard"
             }; logoText()
 

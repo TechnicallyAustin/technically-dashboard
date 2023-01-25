@@ -1,53 +1,116 @@
-:root{}
+:root {
+    --side-width: 30vw;
+    --side-height: 100vh;
+    --side-row-gap: 6vh;
 
-*{
+    --side-bar-item-width: 26vw;
+    --side-bar-item-row-gap: 2vh;
+
+    --mennu-item-height: 4vh;
+    --menu-item-width: 22vw;
+
+    --logo-container-height: 10vh;
+    --logo-icon-height: calc((var(--logo-container-height) / 2));
+    --logo-icon-width: var(--logo-icon-height);
+
+
+
+}
+
+* {
     margin-top: 0;
     margin-left: 0;
     border: 1px solid black;
 }
 
-.side-bar{
-    height: 100vh;
-    width: 30vw;
+.side-bar {
+    height: var(--side-height);
+    width: var(--side-width);
+
     background-color: black;
+
+    display: inline-grid;
+    align-content: start;
+    row-gap: var(--side-row-gap);
+
+    justify-items: center;
+
 }
 
-.side-bar-item{
-    height: 30vh;
-    width:  28vw;
+.side-bar-item {
+    width: var(--side-bar-item-width);
     background-color: white;
+
+    display: inline-grid;
+    row-gap: var(--side-bar-item-row-gap);
+
+    justify-items: center;
+
+    padding-top: 6%;
+    padding-bottom: 6%;
+
+
 }
 
-.logo-container{
-    height: 15vh;
-    width: 28vw;
-    background-color: orange;
+.logo-container {
+    height: var(--logo-container-height);
+    width: var(--side-bar-item-width);
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(2, 1fr 3fr);
+    align-items: center;
+    justify-content: center;
+
+    padding: 2%;
+
 }
 
-.logo-item{}
+.logo-item {}
 
-.logo-icon{
-    height: 8vh;
-    width: 8vw;
-    background-color: purple;
+.logo-icon {
+    height: var(--logo-icon-height);
+    width: var(--logo-icon-width);
+    border: 1px solid white;
+
+    grid-row-start: 3;
+
+    justify-self: center;
+    align-items: center;
 }
 
-.logo-text{
-    height: 8vh;
-    width: 12vw;
+.logo-text-container {
+    width: 100%;
+    border: 1px solid white;
+
+
+    grid-column-start: 2;
+    grid-row-start: 3;
+    display: grid;
+}
+
+.logo-text {
+    margin-bottom: 0;
+    align-self: center;
+    font-size: 38px;
+
 }
 
 
-.menu-item{
-    height: 4vh;
-    width: 10vw;
+.menu-item {
+    height: var(--mennu-item-height);
+    width: var(--menu-item-width);
     background-color: green;
+
+    display: grid;
 }
 
-.option-item{
-    height: 4vh;
-    width: 10vw;
+.option-item {
+    height: var(--mennu-item-height);
+    width: var(--menu-item-width);
+    
     background-color: red;
+
+    display: grid;
 }
-
-
