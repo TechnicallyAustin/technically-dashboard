@@ -27,6 +27,7 @@
     height: var(--side-height);
     width: var(--side-width);
 
+
     background-color: green;
 
     display: grid;

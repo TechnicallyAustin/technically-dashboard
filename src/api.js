@@ -1,5 +1,4 @@
 function dashBoard(){
-
     function sidebar(){
         const sidebar = document.body.appendChild(document.createElement("div"))
         sidebar.setAttribute("class", "container side-bar")
@@ -264,16 +263,39 @@ function dashBoard(){
     }; sidebar()
 
     function header(){
+        const header = document.body.appendChild(document.createElement("div"));
+        header.setAttribute("class", "container header");
+
         function searchSection(){
-            function searchIcon(){};
-            function searchBar(){};
-        };
+            const searchSection = header.appendChild(document.createElement("div"));
+            searchSection.setAttribute("class", "search-section")
+
+              function searchIcon() {
+                const iconContainer = searchSection.appendChild(document.createElement("div"));
+                const icon = iconContainer.setAttribute("class", "menu-icon")
+                icon.setAttribute("class", "menu-icon")
+                icon.setAttribute("src", "")
+                icon.setAttribute("alt", "search bar icon")
+              }; searchIcon()
+
+              function searchBar() {
+                const searchBarContainer = searchSection.appendChild(document.createElement("div"));
+                searchBarContainer.setAttribute("class", "search-bar-container");
+                const searchBar = searchBarContainer.appendChild(document.createElement("input"));
+                searchBar.setAttribute("type", "text");
+            }; searchBar()
+        }; searchSection()
+            
+        
 
         function profileSettings(){
+            const profileSettings = header.appendChild("div");
+            profileSettings.setAttribute("class", "profile");
+
             function notifications(){};
             function profileIcon(){};
             function profileName(){};
-        };
+        }; profileSettings()
 
         function welcome(){
             function welcomeIcon(){};
@@ -285,7 +307,7 @@ function dashBoard(){
             function uploadButton(){};
             function shareButton(){};
         };
-    };
+    }; header()
 
     function main(){
         function projects(){};
@@ -294,4 +316,5 @@ function dashBoard(){
             function trending(){};
         };
     };
+
 }; dashBoard()
