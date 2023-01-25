@@ -7,7 +7,7 @@
     --side-bar-item-row-gap: 1vh;
 
     --mennu-item-height: 4vh;
-    --menu-item-width: 20vw;
+    --menu-item-width: 95%;
 
     --logo-container-height: 10vh;
     --logo-icon-height: calc((var(--logo-container-height) / 2));
@@ -25,14 +25,13 @@
 
 .dash {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5, 1fr);
 }
 
 .side-bar {
-    height: var(--side-height);
-    width: var(--side-width);
-
-
     background-color: green;
 
     display: grid;
@@ -42,14 +41,14 @@
 
     justify-items: center;
     justify-content: space-around;
-    padding-top: 3vh;
+    padding-top: 1vh;
     margin-right: 0;
 
-
+    grid-row: 1/6;
+    grid-column: 1;
 }
 
 .side-bar-item {
-    width: var(--side-bar-item-width);
     color: black;
     display: inline-grid;
     row-gap: var(--side-bar-item-row-gap);
@@ -62,10 +61,11 @@
 }
 
 .logo-container {
-    width: var(--side-bar-item-width);
     display: grid;
     align-items: center;
+    justify-self: center;
     column-gap: 3%;
+
 }
 
 
@@ -90,9 +90,6 @@
 
 
 .menu-item {
-    height: var(--mennu-item-height);
-    width: var(--menu-item-width);
-
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 2vh;
@@ -127,12 +124,11 @@
 
 .header {
     background-color: black;
-    height: 18vh;
-    width: 100%;
     display: grid;
-    grid-column: span 5;
+    grid-column: 2 / 6;
+    grid-row: 1;
 
-    grid-template-rows: repeat(5, 1fr) 4fr;
+    grid-template-rows: repeat(7, 1fr);
     grid-template-columns: repeat(9, 1fr)
 }
 
@@ -172,5 +168,27 @@
     background-color: blue;
     grid-row: 2;
     grid-column: 8/10;
+
+}
+
+.welcome-container{
+    background-color: orange;
+    grid-row: 5 / 7;
+    grid-column: 1 / 5;
+
+}
+
+.buttons-container{
+    background-color: purple;
+    grid-column: 7 / 10;
+    grid-row: 5 / 7;
+}
+
+.container-main{
+    display: grid;
+    background-color: lightblue;
+    grid-row: 2/7;
+    grid-column: 2/ 6;
+
 
 }

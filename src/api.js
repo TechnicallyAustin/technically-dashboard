@@ -302,20 +302,24 @@ function dashBoard(){
         }; profileSettings()
 
         function welcome(){
+            const welcome = header.appendChild(document.createElement("div"));
+            welcome.setAttribute("class", "welcome-container");
             function welcomeIcon(){};
             function welcomeMessage(){};
-        };
+        }; welcome()
 
         function buttons(){
+            const buttons = header.appendChild(document.createElement("div"));
+            buttons.setAttribute("class", "buttons-container");
             function newButton(){};
             function uploadButton(){};
             function shareButton(){};
-        };
+        }; buttons()
     }; header()
 
     function main(){
         const main = dash.appendChild(document.createElement("div"));
-        main.setAttribute("class", "container main")
+        main.setAttribute("class", "container-main")
         function projects(){};
         function announcements(){
             function announce(){};
