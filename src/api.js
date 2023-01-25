@@ -1,6 +1,8 @@
 function dashBoard(){
+    const dash = document.body.appendChild(document.createElement("div"))
+    dash.setAttribute("class", "dash")
     function sidebar(){
-        const sidebar = document.body.appendChild(document.createElement("div"))
+        const sidebar = dash.appendChild(document.createElement("div"))
         sidebar.setAttribute("class", "container side-bar")
 
         function logo(){
@@ -263,7 +265,7 @@ function dashBoard(){
     }; sidebar()
 
     function header(){
-        const header = document.body.appendChild(document.createElement("div"));
+        const header = dash.appendChild(document.createElement("div"));
         header.setAttribute("class", "container header");
 
         function searchSection(){
@@ -271,10 +273,11 @@ function dashBoard(){
             searchSection.setAttribute("class", "search-section")
 
               function searchIcon() {
-                const iconContainer = searchSection.appendChild(document.createElement("div"));
-                const icon = iconContainer.setAttribute("class", "menu-icon")
-                icon.setAttribute("class", "menu-icon")
-                icon.setAttribute("src", "")
+                //const iconContainer = searchSection.appendChild(document.createElement("div"));
+                //iconContainer.setAttribute("class", "menu-icon container");
+                const icon = searchSection.appendChild(document.createElement("img"));
+                icon.setAttribute("class", "search-icon menu-icon")
+                icon.setAttribute("src", "./assets/search.svg")
                 icon.setAttribute("alt", "search bar icon")
               }; searchIcon()
 
@@ -283,14 +286,15 @@ function dashBoard(){
                 searchBarContainer.setAttribute("class", "search-bar-container");
                 const searchBar = searchBarContainer.appendChild(document.createElement("input"));
                 searchBar.setAttribute("type", "text");
+                searchBar.setAttribute("class", "search-input")
             }; searchBar()
         }; searchSection()
             
         
 
         function profileSettings(){
-            const profileSettings = header.appendChild("div");
-            profileSettings.setAttribute("class", "profile");
+            const profileSettings = header.appendChild(document.createElement("div"));
+            profileSettings.setAttribute("class", "header-profile");
 
             function notifications(){};
             function profileIcon(){};
@@ -310,11 +314,13 @@ function dashBoard(){
     }; header()
 
     function main(){
+        const main = dash.appendChild(document.createElement("div"));
+        main.setAttribute("class", "container main")
         function projects(){};
         function announcements(){
             function announce(){};
             function trending(){};
         };
-    };
+    }; main()
 
 }; dashBoard()
