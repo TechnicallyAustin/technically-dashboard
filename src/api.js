@@ -320,11 +320,52 @@ function dashBoard(){
     function main(){
         const main = dash.appendChild(document.createElement("div"));
         main.setAttribute("class", "container-main")
-        function projects(){};
+        function projects(){
+            const projects = main.appendChild(document.createElement("div"));
+            projects.setAttribute("class", "projects-container");
+            const containerTitle = projects.appendChild(document.createElement("div"));
+            containerTitle.setAttribute("class", "projects-title-container");
+            const title = containerTitle.appendChild(document.createElement("h3"));
+            title.setAttribute("class", "projects-title")
+            title.textContent = "Your Projects"
+            const projectArray = [
+              "project-1",
+              "project-2",
+              "project-3",
+              "project-4",
+              "project-5",
+              "project-6",
+            ];
+
+            for (let project of projectArray){
+                const name = project
+                project = projects.appendChild(document.createElement("div"));
+                project.setAttribute("class", `${name} project-item`)
+
+
+
+            }
+
+            // create project div
+                // create project text container
+                    // create h3 title
+                    // create p description
+                // create button container
+                    //create 3 buttons
+        }; projects()
+
         function announcements(){
-            function announce(){};
-            function trending(){};
-        };
+            const announcement = main.appendChild(document.createElement("div"));
+            announcement.setAttribute("class", "announcement-container")
+            function announce(){
+                const announce = announcement.appendChild(document.createElement("div"));
+                announce.setAttribute("class", "announce")
+            }; announce()
+            function trending(){
+                const trend = announcement.appendChild(document.createElement("div"))
+                trend.setAttribute("class", "trending");
+            }; trending()
+        }; announcements()
     }; main()
 
 }; dashBoard()
