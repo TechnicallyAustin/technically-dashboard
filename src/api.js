@@ -11,7 +11,9 @@ function dashBoard(){
             function logoIcon(){
                 const iconContainer = logo.appendChild(document.createElement("div"));
                 iconContainer.setAttribute("class", "icon-container")
-                const icon = iconContainer.appendChild(document.createElement("div"))
+                const icon = iconContainer.appendChild(document.createElement("img"));
+                icon.setAttribute("src", "./assets/laptop.svg");
+                icon.setAttribute("alt", "dashboard logo")
                 icon.setAttribute("class", " logo-item logo-icon")
             }; logoIcon()
 
@@ -39,7 +41,7 @@ function dashBoard(){
                     const iconContainer = home.appendChild(document.createElement("div"))
                     iconContainer.setAttribute("class", "icon-container");
                     const icon = iconContainer.appendChild(document.createElement("img"))
-                    icon.setAttribute("src", "")
+                    icon.setAttribute("src", "./assets/home.svg");
                     icon.setAttribute("alt", "menu-logo")
                     icon.setAttribute("class", "menu-icon")
                 }; homeIcon()
@@ -64,7 +66,7 @@ function dashBoard(){
                     const iconContainer = profile.appendChild(document.createElement("div"));
                     iconContainer.setAttribute("class", "icon-container");
                     const icon = iconContainer.appendChild(document.createElement("img"));
-                    icon.setAttribute("src", "");
+                    icon.setAttribute("src", "./assets/profile.svg");
                     icon.setAttribute("alt", "menu-logo");
                     icon.setAttribute("class", "menu-icon");
                 }; profileIcon()
@@ -90,7 +92,7 @@ function dashBoard(){
                     const iconContainer = messages.appendChild(document.createElement("div"));
                     iconContainer.setAttribute("class", "icon-container");
                     const icon = iconContainer.appendChild(document.createElement("img"))
-                    icon.setAttribute("src", "")
+                    icon.setAttribute("src", "./assets/message.svg");
                     icon.setAttribute("alt", "menu-logo")
                     icon.setAttribute("class", "menu-icon")
                 }; messagesIcon()
@@ -114,7 +116,7 @@ function dashBoard(){
                     const iconContainer = history.appendChild(document.createElement("div"))
                     iconContainer.setAttribute("class", "icon-container");
                     const icon = iconContainer.appendChild(document.createElement("img"))
-                    icon.setAttribute("src", "")
+                    icon.setAttribute("src", "./assets/history.svg");
                     icon.setAttribute("alt", "menu-logo")
                     icon.setAttribute("class", "menu-icon")
                 }; historyIcon()
@@ -138,7 +140,7 @@ function dashBoard(){
                     const iconContainer = tasks.appendChild(document.createElement("div"))
                     iconContainer.setAttribute("class", "icon-container");
                     const icon = iconContainer.appendChild(document.createElement("img"))
-                    icon.setAttribute("src", "")
+                    icon.setAttribute("src", "./assets/tasks.svg");
                     icon.setAttribute("alt", "menu-logo")
                     icon.setAttribute("class", "menu-icon")
                 }; tasksIcon()
@@ -163,7 +165,7 @@ function dashBoard(){
                     const iconContainer = community.appendChild(document.createElement("div"))
                     iconContainer.setAttribute("class", "icon-container");
                     const icon = iconContainer.appendChild(document.createElement("img"))
-                    icon.setAttribute("src", "")
+                    icon.setAttribute("src", "./assets/community.svg");
                     icon.setAttribute("alt", "menu-logo")
                     icon.setAttribute("class", "menu-icon")
                 }; communityIcon()
@@ -192,7 +194,7 @@ function dashBoard(){
                     const iconContainer = settings.appendChild(document.createElement("div"))
                     iconContainer.setAttribute("class", "icon-container");
                     const icon = iconContainer.appendChild(document.createElement("img"))
-                    icon.setAttribute("src", "")
+                    icon.setAttribute("src", "./assets/settings.svg");
                     icon.setAttribute("alt", "menu-logo")
                     icon.setAttribute("class", "menu-icon")
                 }; settingIcon()
@@ -218,7 +220,7 @@ function dashBoard(){
                     const iconContainer = support.appendChild(document.createElement("div"))
                     iconContainer.setAttribute("class", "icon-container");
                     const icon = iconContainer.appendChild(document.createElement("img"))
-                    icon.setAttribute("src", "")
+                    icon.setAttribute("src", "./assets/support 2.svg");
                     icon.setAttribute("alt", "menu-logo")
                     icon.setAttribute("class", "menu-icon")
                 }; supportIcon()
@@ -242,6 +244,7 @@ function dashBoard(){
                     const iconContainer = privacy.appendChild(document.createElement("div"))
                     iconContainer.setAttribute("class", "icon-container");
                     const icon = iconContainer.appendChild(document.createElement("img"))
+                    icon.setAttribute("src", "./assets/account-lock.svg");
                     icon.setAttribute("alt", "menu-logo")
                     icon.setAttribute("class", "menu-icon")
                 }; privacyIcon()
