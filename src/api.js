@@ -9,7 +9,9 @@ function dashBoard(){
             logo.setAttribute("class", "side-bar-item logo-container" )
 
             function logoIcon(){
-                const icon = logo.appendChild(document.createElement("div"))
+                const iconContainer = logo.appendChild(document.createElement("div"));
+                iconContainer.setAttribute("class", "icon-container")
+                const icon = iconContainer.appendChild(document.createElement("div"))
                 icon.setAttribute("class", " logo-item logo-icon")
             }; logoIcon()
 
@@ -35,6 +37,7 @@ function dashBoard(){
 
                 function homeIcon(){
                     const iconContainer = home.appendChild(document.createElement("div"))
+                    iconContainer.setAttribute("class", "icon-container");
                     const icon = iconContainer.appendChild(document.createElement("img"))
                     icon.setAttribute("src", "")
                     icon.setAttribute("alt", "menu-logo")
@@ -58,11 +61,12 @@ function dashBoard(){
                 profile.setAttribute("class", "menu-item profile-container");
 
                 function profileIcon(){
-                    const iconContainer = profile.appendChild(document.createElement("div"))
-                    const icon = iconContainer.appendChild(document.createElement("img"))
-                    icon.setAttribute("src", "")
-                    icon.setAttribute("alt", "menu-logo")
-                    icon.setAttribute("class", "menu-icon")
+                    const iconContainer = profile.appendChild(document.createElement("div"));
+                    iconContainer.setAttribute("class", "icon-container");
+                    const icon = iconContainer.appendChild(document.createElement("img"));
+                    icon.setAttribute("src", "");
+                    icon.setAttribute("alt", "menu-logo");
+                    icon.setAttribute("class", "menu-icon");
                 }; profileIcon()
 
                 function profileText(){
@@ -83,7 +87,8 @@ function dashBoard(){
                 messages.setAttribute("class", "menu-item messages-container");
 
                 function messagesIcon(){
-                    const iconContainer = messages.appendChild(document.createElement("div"))
+                    const iconContainer = messages.appendChild(document.createElement("div"));
+                    iconContainer.setAttribute("class", "icon-container");
                     const icon = iconContainer.appendChild(document.createElement("img"))
                     icon.setAttribute("src", "")
                     icon.setAttribute("alt", "menu-logo")
@@ -107,6 +112,7 @@ function dashBoard(){
 
                 function historyIcon(){
                     const iconContainer = history.appendChild(document.createElement("div"))
+                    iconContainer.setAttribute("class", "icon-container");
                     const icon = iconContainer.appendChild(document.createElement("img"))
                     icon.setAttribute("src", "")
                     icon.setAttribute("alt", "menu-logo")
@@ -130,6 +136,7 @@ function dashBoard(){
 
                 function tasksIcon(){
                     const iconContainer = tasks.appendChild(document.createElement("div"))
+                    iconContainer.setAttribute("class", "icon-container");
                     const icon = iconContainer.appendChild(document.createElement("img"))
                     icon.setAttribute("src", "")
                     icon.setAttribute("alt", "menu-logo")
@@ -154,6 +161,7 @@ function dashBoard(){
                 
                 function communityIcon(){
                     const iconContainer = community.appendChild(document.createElement("div"))
+                    iconContainer.setAttribute("class", "icon-container");
                     const icon = iconContainer.appendChild(document.createElement("img"))
                     icon.setAttribute("src", "")
                     icon.setAttribute("alt", "menu-logo")
@@ -178,10 +186,11 @@ function dashBoard(){
 
             function settings(){
                 const settings = options.appendChild(document.createElement("div"));
-                settings.setAttribute("class", "option-item settings-container")
+                settings.setAttribute("class", "menu-item settings-container")
 
                  function settingIcon(){
                     const iconContainer = settings.appendChild(document.createElement("div"))
+                    iconContainer.setAttribute("class", "icon-container");
                     const icon = iconContainer.appendChild(document.createElement("img"))
                     icon.setAttribute("src", "")
                     icon.setAttribute("alt", "menu-logo")
@@ -203,10 +212,11 @@ function dashBoard(){
 
             function support(){
                 const support = options.appendChild(document.createElement("div"));
-                support.setAttribute("class", "option-item  support-container");
+                support.setAttribute("class", "menu-item  support-container");
 
                  function supportIcon(){
                     const iconContainer = support.appendChild(document.createElement("div"))
+                    iconContainer.setAttribute("class", "icon-container");
                     const icon = iconContainer.appendChild(document.createElement("img"))
                     icon.setAttribute("src", "")
                     icon.setAttribute("alt", "menu-logo")
@@ -226,12 +236,12 @@ function dashBoard(){
 
             function privacy(){
                 const privacy = options.appendChild(document.createElement("div"));
-                privacy.setAttribute("class", "option-item  privacy-container");
+                privacy.setAttribute("class", "menu-item  privacy-container");
                 
                  function privacyIcon(){
                     const iconContainer = privacy.appendChild(document.createElement("div"))
+                    iconContainer.setAttribute("class", "icon-container");
                     const icon = iconContainer.appendChild(document.createElement("img"))
-                    icon.setAttribute("src", "")
                     icon.setAttribute("alt", "menu-logo")
                     icon.setAttribute("class", "menu-icon")
                 }; privacyIcon()
