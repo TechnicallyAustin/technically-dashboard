@@ -60,7 +60,7 @@ function dash(){
             searchBox.setAttribute("class", "search")
 
             function icon(){
-                const icon = header.appendChild(document.createElement("img"));
+                const icon = searchBox.appendChild(document.createElement("img"));
                 icon.setAttribute("class", "search-icon")  
                 icon.setAttribute("src", "assets_v2/search.svg");            
                 icon.setAttribute("alt", "search bar icon")            
@@ -79,19 +79,22 @@ function dash(){
             welcome.setAttribute("class", "welcome");
 
             function icon(){
-                const container = header.appendChild(document.createElement("div"));
-                container.setAttribute("class", "profile-background")
+                const container = welcome.appendChild(document.createElement("div"));
+                container.setAttribute("class", "welcome-icon-background")
                 const icon = container.appendChild(document.createElement("img"));
                 icon.setAttribute("class", "welcome-icon")  
                 icon.setAttribute("src", "assets/brain.svg");            
                 icon.setAttribute("alt", "welcome profile icon")       
             }; icon()
-            function message(){
-                const message = welcome.appendChild(document.createElement("p"));
-                message.setAttribute("class", "message-text")
-                message.textContent = "Hi there, "
 
-                const subText = welcome.appendChild(document.createElement("h2"))
+            function message(){
+                const container = welcome.appendChild(document.createElement("div"));
+                container.setAttribute("class", "welcome-message")
+                const message = container.appendChild(document.createElement("p"));
+                message.setAttribute("class", "message-text")
+                message.textContent = "Hi there,"
+
+                const subText = container.appendChild(document.createElement("h2"))
                 subText.setAttribute("class", "welcome-name")
                 subText.textContent = "Austin Johnson (@TechnicallyAJ)"
             }; message()
