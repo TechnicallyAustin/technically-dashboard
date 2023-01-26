@@ -350,9 +350,27 @@ function dashBoard(){
         }; welcome()
 
         function buttons(){
+            const buttonsArray = ["new", "upload", "share"]
             const buttons = header.appendChild(document.createElement("div"));
             buttons.setAttribute("class", "buttons-container");
-            function newButton(){};
+
+            function newButton(){
+
+                for(let button of buttonsArray){
+                    let name = button
+
+                    let container = buttons.appendChild(document.createElement("div"));
+                    container.setAttribute("class", `${name}-button-container`)
+
+
+                    button = container.appendChild(document.createElement("button"));
+                    button.setAttribute("class", `${name} header-button`)
+                    button.setAttribute("type", "button")
+                    button.setAttribute("value", `${name}`)
+                    button.textContent = name
+
+                }
+            } ;newButton()
             function uploadButton(){};
             function shareButton(){};
         }; buttons()
@@ -382,17 +400,7 @@ function dashBoard(){
                 const name = project
                 project = projects.appendChild(document.createElement("div"));
                 project.setAttribute("class", `${name} project-item`)
-
-
-
             }
-
-            // create project div
-                // create project text container
-                    // create h3 title
-                    // create p description
-                // create button container
-                    //create 3 buttons
         }; projects()
 
         function announcements(){
