@@ -296,16 +296,52 @@ function dashBoard(){
             const profileSettings = header.appendChild(document.createElement("div"));
             profileSettings.setAttribute("class", "header-profile");
 
-            function notifications(){};
-            function profileIcon(){};
-            function profileName(){};
+            function notifications(){
+
+            };
+
+            function profileIcon(){
+                const iconContainer = profileSettings.appendChild(document.createElement("div"));
+                iconContainer.setAttribute("class", "welcome-icon-container")
+                const icon = iconContainer.appendChild(document.createElement("img"));
+                icon.setAttribute("class","welcome-icon");
+                icon.setAttribute("src","")
+                icon.setAttribute("alt", "profile imagee of a brain")
+            }; profileIcon()
+
+            function profileName(){
+                const profileNameContainer = profileSettings.appendChild(document.createElement("h3"));
+                profileNameContainer.setAttribute("class", "profile-name-container");
+                const profile = profileNameContainer.appendChild(document.createElement("h3"));
+                profile.setAttribute("class", "profile-name")
+            };profileName()
         }; profileSettings()
 
         function welcome(){
             const welcome = header.appendChild(document.createElement("div"));
             welcome.setAttribute("class", "welcome-container");
-            function welcomeIcon(){};
-            function welcomeMessage(){};
+
+            function welcomeIcon(){
+                const iconContainer = welcome.appendChild(document.createElement("div"));
+                iconContainer.setAttribute("class", "welcome-icon-container")
+                const icon = iconContainer.appendChild(document.createElement("img"));
+                icon.setAttribute("class","welcome-icon");
+                icon.setAttribute("src","./assets/brain.svg")
+                icon.setAttribute("alt", "profile image of a brain")
+            }; welcomeIcon()
+
+            function welcomeMessage(){
+                const messageContainer = welcome.appendChild(document.createElement("div"));
+                messageContainer.setAttribute("class", "welcome-message");
+                const message = messageContainer.appendChild(document.createElement("p"));
+                message.setAttribute("class", "message-text");
+                message.textContent = "Hi there,"
+
+                const profile = messageContainer.appendChild(document.createElement("h3"));
+                profile.setAttribute("class", "welcome-profile")
+                profile.textContent = "Austin Johnson (@Turtle)"
+
+            }; welcomeMessage()
         }; welcome()
 
         function buttons(){
