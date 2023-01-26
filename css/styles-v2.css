@@ -1,4 +1,7 @@
-:root {}
+:root {
+    --logo-width: 6vw;
+
+}
 
 * {
     margin: 0;
@@ -16,13 +19,118 @@ body {
 
 .side {
     background-color: black;
+    color: white;
 
     grid-column: 1;
     grid-row: 1/3;
 
     display: grid;
-    grid-template-columns: 1fr 2fr 6fr 1fr;
-    grid-template-rows: 1fr 6fr 3fr 3fr;
+    grid-template-columns: 1fr 1fr 2fr 6fr 1fr;
+    grid-template-rows: 1fr repeat(6, 1fr) 1fr repeat(4, 1fr) 8fr;
+    padding-top: 5%;
+    column-gap: 2%;
+    row-gap: 1%;
+}
+
+.menu-icons {
+    width: 3vw;
+    justify-self: center;
+}
+
+    .home-icon {
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    .profile-icon {
+        grid-row: 4;
+        grid-column: 2;
+    }
+
+    .messages-icon {
+        grid-row: 5;
+        grid-column: 2;
+    }
+
+    .history-icon {
+        grid-row: 6;
+        grid-column: 2;
+    }
+
+    .tasks-icon {
+        grid-row: 7;
+        grid-column: 2;
+    }
+
+    .communities-icon {
+        grid-row: 8;
+        grid-column: 2;
+    }
+
+    .settings-icon {
+        grid-row: 10;
+        grid-column: 2;
+    }
+
+    .support-icon {
+        grid-row: 11;
+        grid-column: 2;
+    }
+
+    .privacy-icon {
+        grid-row: 12;
+        grid-column: 2;
+    }
+
+
+.menu-items{
+    align-self: center;
+
+}
+
+.home {
+    grid-row: 3;
+    grid-column: 3/5;
+}
+
+.profile {
+    grid-row: 4;
+    grid-column: 3/5;
+}
+
+.messages {
+    grid-row: 5;
+    grid-column: 3/5;
+}
+
+.history {
+    grid-row: 6;
+    grid-column: 3/5;
+}
+
+.tasks {
+    grid-row: 7;
+    grid-column: 3/5;
+}
+
+.communities {
+    grid-row: 8;
+    grid-column: 3/5;
+}
+
+.settings {
+    grid-row: 10;
+    grid-column: 3/5;
+}
+
+.support {
+    grid-row: 11;
+    grid-column: 3/5;
+}
+
+.privacy {
+    grid-row: 12;
+    grid-column: 3/5;
 }
 
 .header {
@@ -32,7 +140,6 @@ body {
     grid-row: 1;
 
     display: grid;
-
 }
 
 .main {
@@ -44,5 +151,17 @@ body {
     display: grid;
 
     grid-template-columns: 1fr 7fr 7fr 6fr;
-    grid-template-rows: 1fr 5fr 5fr 5fr 1fr;
+    grid-template-rows: 1fr 1fr 5fr 5fr 5fr 1fr;
+}
+
+.logo {
+    height: auto;
+    width: var(--logo-width);
+    grid-column: 2;
+
+}
+
+.logo-title {
+    grid-column: 3/5;
+    align-self: center;
 }
