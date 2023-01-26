@@ -342,8 +342,8 @@ function dashBoard(){
                 message.setAttribute("class", "message-text");
                 message.textContent = "Hi there,"
 
-                const profile = messageContainer.appendChild(document.createElement("h3"));
-                profile.setAttribute("class", "welcome-profile")
+                const profile = messageContainer.appendChild(document.createElement("p"));
+                profile.setAttribute("class", "welcome")
                 profile.textContent = "Austin Johnson (@Turtle)"
 
             }; welcomeMessage()
