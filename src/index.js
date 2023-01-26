@@ -75,9 +75,27 @@ function dash(){
         }; search()
 
         function welcome(){
-            function icon(){};
-            function message(){};
-        };
+            const welcome = header.appendChild(document.createElement("div"));
+            welcome.setAttribute("class", "welcome");
+
+            function icon(){
+                const container = header.appendChild(document.createElement("div"));
+                container.setAttribute("class", "profile-background")
+                const icon = container.appendChild(document.createElement("img"));
+                icon.setAttribute("class", "welcome-icon")  
+                icon.setAttribute("src", "assets/brain.svg");            
+                icon.setAttribute("alt", "welcome profile icon")       
+            }; icon()
+            function message(){
+                const message = welcome.appendChild(document.createElement("p"));
+                message.setAttribute("class", "message-text")
+                message.textContent = "Hi there, "
+
+                const subText = welcome.appendChild(document.createElement("h2"))
+                subText.setAttribute("class", "welcome-name")
+                subText.textContent = "Austin Johnson (@TechnicallyAJ)"
+            }; message()
+        }; welcome()
 
         function profile(){
             function notifications(){};
