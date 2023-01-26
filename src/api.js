@@ -408,11 +408,19 @@ function dashBoard(){
             announcement.setAttribute("class", "announcement-container")
             function announce(){
                 const announce = announcement.appendChild(document.createElement("div"));
-                announce.setAttribute("class", "announce")
+                announce.setAttribute("class", "announcement")
+
+                const text = announcement.appendChild(document.createElement("h3"));
+                text.setAttribute("class", "announcement-title")
+                text.textContent = "Announcements"
             }; announce()
             function trending(){
                 const trend = announcement.appendChild(document.createElement("div"))
                 trend.setAttribute("class", "trending");
+
+                const text = announcement.appendChild(document.createElement("h3"));
+                text.setAttribute("class", "trending-title")
+                text.textContent = "Trending"
             }; trending()
         }; announcements()
     }; main()
