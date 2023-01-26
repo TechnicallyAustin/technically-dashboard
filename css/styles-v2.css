@@ -18,7 +18,7 @@ body {
 }
 
 .side {
-    background-color: black;
+    background-color: #1B263B;
     color: white;
 
     grid-column: 1;
@@ -88,68 +88,95 @@ body {
 
 }
 
-.home {
-    grid-row: 3;
-    grid-column: 3/5;
-}
+        .home {
+            grid-row: 3;
+            grid-column: 3/5;
+        }
 
-.profile {
-    grid-row: 4;
-    grid-column: 3/5;
-}
+        .profile {
+            grid-row: 4;
+            grid-column: 3/5;
+        }
 
-.messages {
-    grid-row: 5;
-    grid-column: 3/5;
-}
+        .messages {
+            grid-row: 5;
+            grid-column: 3/5;
+        }
 
-.history {
-    grid-row: 6;
-    grid-column: 3/5;
-}
+        .history {
+            grid-row: 6;
+            grid-column: 3/5;
+        }
 
-.tasks {
-    grid-row: 7;
-    grid-column: 3/5;
-}
+        .tasks {
+            grid-row: 7;
+            grid-column: 3/5;
+        }
 
-.communities {
-    grid-row: 8;
-    grid-column: 3/5;
-}
+        .communities {
+            grid-row: 8;
+            grid-column: 3/5;
+        }
 
-.settings {
-    grid-row: 10;
-    grid-column: 3/5;
-}
+        .settings {
+            grid-row: 10;
+            grid-column: 3/5;
+        }
 
-.support {
-    grid-row: 11;
-    grid-column: 3/5;
-}
+        .support {
+            grid-row: 11;
+            grid-column: 3/5;
+        }
 
-.privacy {
-    grid-row: 12;
-    grid-column: 3/5;
-}
+        .privacy {
+            grid-row: 12;
+            grid-column: 3/5;
+        }
 
 .header {
-    background-color: lightblue;
+    background-color: #778DA9;
+    border-bottom: 4px solid #0D1B2A;
+
 
     grid-column: 2;
     grid-row: 1;
 
     display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr repeat(8, 3fr) 1fr 1fr;
+
 }
+    .search {
+
+        grid-column: 3/8;
+        grid-row: 2;
+
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .search-icon{
+        width: 2vw;
+
+        grid-column: 2;
+        grid-row: 2;
+
+        align-self: center;
+    }
+
+    .search-input{
+        border-radius: 20px;
+    }
+
+
 
 .main {
-    background-color: green;
+    background-color: #E0E1DD;
 
     grid-column: 2;
     grid-row: 2;
 
     display: grid;
-
     grid-template-columns: 1fr 7fr 7fr 6fr;
     grid-template-rows: 1fr 1fr 5fr 5fr 5fr 1fr;
 }

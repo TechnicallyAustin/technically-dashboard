@@ -1,7 +1,5 @@
 function dash(){
     const dash = document.querySelector("body");
-    console.log(dash)
-
     function side(){
         const side = dash.appendChild(document.createElement("div"))
         side.setAttribute("class", "side")
@@ -58,9 +56,23 @@ function dash(){
         header.setAttribute("class", "header");
 
         function search(){
-            function icon(){};
-            function search(){};
-        };
+            const searchBox = header.appendChild(document.createElement("div"))
+            searchBox.setAttribute("class", "search")
+
+            function icon(){
+                const icon = header.appendChild(document.createElement("img"));
+                icon.setAttribute("class", "search-icon")  
+                icon.setAttribute("src", "assets_v2/search.svg");            
+                icon.setAttribute("alt", "search bar icon")            
+            }; icon()
+
+            function input(){
+                const input = searchBox.appendChild(document.createElement("input"));
+                input.setAttribute("type","text")
+                input.setAttribute("class", "search-input")
+            }; input()
+
+        }; search()
 
         function welcome(){
             function icon(){};
