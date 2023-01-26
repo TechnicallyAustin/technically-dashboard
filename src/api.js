@@ -297,16 +297,20 @@ function dashBoard(){
             profileSettings.setAttribute("class", "header-profile");
 
             function notifications(){
+                const notifications = profileSettings.appendChild(document.createElement("img"))
+                notifications.setAttribute("class", "profile-notify-icon")
+                notifications.setAttribute("src", "./assets/bell-ring.svg")
+                notifications.setAttribute("alt", "profile notifications icon")
 
-            };
+            }; notifications()
 
             function profileIcon(){
                 const iconContainer = profileSettings.appendChild(document.createElement("div"));
-                iconContainer.setAttribute("class", "welcome-icon-container")
+                iconContainer.setAttribute("class", "profile-icon-container")
                 const icon = iconContainer.appendChild(document.createElement("img"));
-                icon.setAttribute("class","welcome-icon");
-                icon.setAttribute("src","")
-                icon.setAttribute("alt", "profile imagee of a brain")
+                icon.setAttribute("class","profile-icon");
+                icon.setAttribute("src","./assets/brain.svg")
+                icon.setAttribute("alt", "profile image of a brain")
             }; profileIcon()
 
             function profileName(){
@@ -314,6 +318,7 @@ function dashBoard(){
                 profileNameContainer.setAttribute("class", "profile-name-container");
                 const profile = profileNameContainer.appendChild(document.createElement("h3"));
                 profile.setAttribute("class", "profile-name")
+                profile.textContent = "Austin Johnson"
             };profileName()
         }; profileSettings()
 
