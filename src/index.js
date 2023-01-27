@@ -128,18 +128,81 @@ function dash(){
         }; profile()
 
         function buttons(){
-            function add(){};
-            function upload(){};
-            function share(){};
-        };
+            const buttonsArray = ["New","Upload","Share"]
+            const container = header.appendChild(document.createElement("div"));
+            container.setAttribute("class", "buttons")
+
+            for (let i = 0; i < buttonsArray.length; i++){
+                let button = buttonsArray[i]
+                console.log(button)
+                let newButton = container.appendChild(document.createElement("button"));
+                newButton.setAttribute("class", `${button.toLowerCase()} profile-button`)
+                newButton.setAttribute("type", "")
+                newButton.setAttribute("value", `${button}`)
+                newButton.textContent = button
+            }
+        }; buttons()
 
     }; header()
 
     function main(){
         const main = dash.appendChild(document.createElement("main"));
         main.setAttribute("class", "main");
-        function projects(){};
-        function announcements(){};
-        function trending(){};
+
+        function projects(){
+            const projects = main.appendChild(document.createElement("div"));
+            projects.setAttribute("class", "projects");
+
+            const title = projects.appendChild(document.createElement("h2"));
+            title.setAttribute("class", "project-section-title")
+            title.textContent = "Your Projects"
+            
+            const projectsArray = [
+              "Project-one",
+              "Project-two",
+              "Project-three",
+              "Project-four",
+              "Project-five",
+              "Project-six",
+            ];
+
+            for (let i = 0; i < projectsArray.length; i ++){
+                let project = projectsArray[i]
+                console.log(project)
+
+                let card = projects.appendChild(document.createElement("div"))
+                card.setAttribute("class", `${project.toLowerCase()} project-card`)
+
+                let title = card.appendChild(document.createElement("h3"));
+                title.setAttribute("class", "project-title")
+                title.textContent = `${project}`
+
+                let description = card.appendChild(document.createElement("p"))
+                description.setAttribute("class", "project-description");
+                description.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+
+                let share = card.appendChild(document.createElement("div"))
+                share.setAttribute("class", "project-share")
+
+
+
+
+
+
+
+
+
+            }
+
+            
+        }; projects()
+        function announcements(){
+            const announcements = main.appendChild(document.createElement("div"));
+            announcements.setAttribute("class", "announcements");
+        }; announcements()
+        function trending(){
+              const trending = main.appendChild(document.createElement("div"));
+              trending.setAttribute("class", "trending");
+        }; trending()
     }; main()
 }; dash()
