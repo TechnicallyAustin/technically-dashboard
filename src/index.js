@@ -184,25 +184,62 @@ function dash(){
                 let share = card.appendChild(document.createElement("div"))
                 share.setAttribute("class", "project-share")
 
-
-
-
-
-
-
-
-
+                let star = share.appendChild(document.createElement("img"));
+                star.setAttribute("class", "")
+                star.setAttribute("src", "");
+                star.setAttribute("alt", "");
+                let eye = share.appendChild(document.createElement("img"));
+                eye.setAttribute("class", "");
+                eye.setAttribute("src", "");
+                eye.setAttribute("alt", "");
+                let network = share.appendChild(document.createElement("img"));
+                eye.setAttribute("class", "");
+                eye.setAttribute("src", "");
+                eye.setAttribute("alt", "");
             }
-
-            
         }; projects()
-        function announcements(){
-            const announcements = main.appendChild(document.createElement("div"));
-            announcements.setAttribute("class", "announcements");
-        }; announcements()
-        function trending(){
-              const trending = main.appendChild(document.createElement("div"));
-              trending.setAttribute("class", "trending");
-        }; trending()
+
+        function panel(){
+            const panel = main.appendChild(document.createElement("div"));
+            panel.setAttribute("class", "panel")
+
+            function announcements(){
+                const announcements = panel.appendChild(document.createElement("div"));
+                announcements.setAttribute("class", "announcements");
+
+                function title(){  
+                    const title = announcements.appendChild(document.createElement("h3"));
+                    title.setAttribute("class", "announcement-title");
+                    title.textContent = "Announcements"
+                }; title()
+
+                  function post() {
+                    const postArray = ["First", "Second", "Third"];
+                    for (let i = 0; i < postArray.length; i++){
+                        let post = postArray[i]
+                        let item = announcements.appendChild(document.createElement("h4"));
+                        item.setAttribute("class", `${post.toLowerCase()}`)
+                        item.textContent = post
+                    }
+                  }; post()
+
+            }; announcements()
+
+            function trending(){
+                const trending = panel.appendChild(document.createElement("div"));
+                trending.setAttribute("class", "trending");
+
+                function title(){
+                    const title = trending.appendChild(document.createElement("h3"));
+                    title.setAttribute("class", "trending-title");
+                    title.textContent = "Trending"
+                }; title()
+
+
+
+
+            }; trending()
+        }; panel()   
+
     }; main()
 }; dash()
