@@ -102,7 +102,7 @@ function dash(){
 
         function profile(){
             const profile = header.appendChild(document.createElement("div"));
-            profile.setAttribute("class", "profile");
+            profile.setAttribute("class", "profile-header");
 
             function notifications(){
                 const notification = profile.appendChild(document.createElement("img"));
@@ -115,7 +115,7 @@ function dash(){
                 const container = profile.appendChild(document.createElement("div"));
                 container.setAttribute("class", "profile-icon-bg")
                 const icon = container.appendChild(document.createElement("img"));
-                icon.setAttribute("class", "profile-icon")
+                icon.setAttribute("class", "profile-container-icon")
                 icon.setAttribute("src", "assets/brain.svg");
                 icon.setAttribute("alt", "profile icon image");
             }; icon()
