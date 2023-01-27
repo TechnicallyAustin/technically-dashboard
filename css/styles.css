@@ -7,23 +7,85 @@ body {
   background-color: black;
   grid-area: side;
   display: grid;
+  grid-template-areas: "logo logo" "menu menu" "option option";
+  grid-template-rows: 1fr 8fr 2fr;
+}
+.side .logo {
+  grid-area: logo;
+  display: grid;
+  grid-template-areas: "image text";
+  align-items: center;
+  justify-content: center;
 }
 .side .logo .logo-image {
   width: 6vw;
+  grid-area: image;
+  align-items: center;
+  justify-self: center;
 }
 .side .logo .logo-title {
   color: white;
-  grid-column: text;
-  grid-row: 1;
+  grid-area: text;
+  align-items: center;
+  justify-self: center;
 }
-.side .menu .menu-items {
-  color: white;
-  grid-column: menu-text;
+.side .menu {
+  grid-area: menu;
+  display: grid;
+  grid-template-areas: "item";
+  align-items: center;
 }
-.side .menu .menu-icons {
+.side .menu .item-box {
+  grid-column: item;
+  display: grid;
+  grid-template-areas: "icon text";
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  justify-content: center;
+}
+.side .menu .item-box .menu-icons {
   width: 2vw;
+  grid-column: icon;
+  align-items: center;
+  justify-self: center;
+}
+.side .menu .item-box .menu-items {
+  color: white;
+  grid-column: text;
+  align-items: center;
+  justify-self: left;
+}
+.side .options {
+  grid-area: option;
+  display: grid;
+  grid-template-areas: "icon text";
+  align-items: center;
+}
+.side .options .option-icons {
+  width: 2vw;
+  grid-column: icon;
+  align-items: center;
+  justify-self: center;
+}
+.side .options .option-items {
+  color: white;
+  grid-column: text;
+  align-items: center;
+  justify-content: left;
 }
 
 .header {
   grid-area: header;
+}
+.header .search .search-icon {
+  width: 2vw;
+}
+.header .welcome .welcome-icon-bg {
+  width: 6vw;
+}
+.header .profile-controls .notify-icon {
+  width: 2vw;
+}
+.header .profile-controls .profile-icon-bg {
+  width: 2vw;
 }/*# sourceMappingURL=styles.css.map */

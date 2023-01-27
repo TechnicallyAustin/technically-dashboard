@@ -28,32 +28,135 @@ body {
     grid-area: side;
 
     display: grid;
+    grid-template-areas:
+    "logo logo"
+    "menu menu"
+    "option option";
+    grid-template-rows: 1fr 8fr 2fr;
 
     .logo{
+        grid-area: logo;
+
+        display: grid;
+        grid-template-areas: 
+        "image text"
+        ;
+        align-items: center;
+        justify-content: center;
+
         .logo-image{
             width: $logo-width;
+            grid-area: image;
+            align-items: center;
+            justify-self: center;
         }
         .logo-title{
             color: white;
-            grid-column: text;
-            grid-row: 1;
+            grid-area: text;
+            align-items: center;
+            justify-self: center;
+
         }
     }
 
     .menu{
-        .menu-items{
-            color: white;
-            grid-column: menu-text;
+        grid-area: menu;
+        display: grid;
+        grid-template-areas: "item";
+        align-items: center;
+
+        .item-box{
+            grid-column: item;
+            display: grid;
+            grid-template-areas:
+            "icon text";
+            grid-template-columns: 1fr 4fr;
+            align-items: center;
+            justify-content: center;
+
+            .menu-icons{
+                width: $side-icon-width;
+                grid-column: icon;
+                align-items: center;
+                justify-self: center;
+            }
+            .menu-items{
+                color: white;
+                grid-column: text;
+                align-items: center;
+                justify-self: left;
+            }
         }
 
-        .menu-icons{
+
+    }
+
+    .options{
+
+        grid-area: option;
+        display: grid;
+        grid-template-areas: "icon text";
+
+
+        align-items: center;
+
+        .option-icons{
             width: $side-icon-width;
+            grid-column: icon;
+
+            align-items: center;
+            justify-self: center;
+
         }
+        .option-items{
+            color: white;
+            grid-column: text;
+            align-items: center;
+            justify-content: left;
+        }
+
     }
 }
 
 .header{
     grid-area: header;
+
+    .search{
+        .search-icon{
+            width: $side-icon-width;
+        }
+        .search-input{}
+    }
+
+    .welcome{
+        .welcome-icon-bg{
+            width: $logo-width;
+        }
+        .welcome-icon{
+
+        }
+        .welcome-message{}
+        .welcome-text{}
+        .welcome-name{}
+    }
+
+    .profile-controls{
+
+        .notify-icon{
+            width: $side-icon-width
+        }
+        .profile-icon-bg{
+            width: $side-icon-width;
+        }
+        .profile-header-icon{
+        }
+        .profile-bg{}
+        .profile-name{}
+    }
+
+    .header-button{
+        .profile-button{}
+    }
 
 }
 
