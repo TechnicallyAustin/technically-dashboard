@@ -101,10 +101,31 @@ function dash(){
         }; welcome()
 
         function profile(){
-            function notifications(){};
-            function icon(){};
-            function name(){};
-        };
+            const profile = header.appendChild(document.createElement("div"));
+            profile.setAttribute("class", "profile");
+
+            function notifications(){
+                const notification = profile.appendChild(document.createElement("img"));
+                notification.setAttribute("class", "notify-icon")
+                notification.setAttribute("src", "assets_v2/notify.svg");
+                notification.setAttribute("alt", "notifications icon");
+            }; notifications()
+
+            function icon(){
+                const container = profile.appendChild(document.createElement("div"));
+                container.setAttribute("class", "profile-icon-bg")
+                const icon = container.appendChild(document.createElement("img"));
+                icon.setAttribute("class", "profile-icon")
+                icon.setAttribute("src", "assets/brain.svg");
+                icon.setAttribute("alt", "profile icon image");
+            }; icon()
+
+            function name(){
+                const name = profile.appendChild(document.createElement("h3"));
+                name.setAttribute("class", "profile-name");
+                name.textContent = "Austin Johnson"
+            }; name()
+        }; profile()
 
         function buttons(){
             function add(){};
