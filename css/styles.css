@@ -1,4 +1,29 @@
 body {
   display: grid;
-  background-color: red;
+  grid-template-areas: "side header header header" "side header header header" "side main main main" "side main main main" "side main main main" "side main main main";
+}
+
+.side {
+  background-color: black;
+  grid-area: side;
+  display: grid;
+}
+.side .logo .logo-image {
+  width: 6vw;
+}
+.side .logo .logo-title {
+  color: white;
+  grid-column: text;
+  grid-row: 1;
+}
+.side .menu .menu-items {
+  color: white;
+  grid-column: menu-text;
+}
+.side .menu .menu-icons {
+  width: 2vw;
+}
+
+.header {
+  grid-area: header;
 }/*# sourceMappingURL=styles.css.map */

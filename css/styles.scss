@@ -1,20 +1,59 @@
 $logo-width: 6vw;
+$side-icon-width: 2vw;
+$profile-icon-width: 2vw;
+$welcome-icon-width: 4vw;
 $header-color: #778DA9;
 $side-color: #1B263B;
 $main-color: #E0E1DD;
 $project-color: #0D1B2A;
 $alt-color: #415A77;
 
+
 body {
-    display: grid; 
-    background-color:   
+    display: grid;
+    grid-template-areas:
+    "side header header header"
+    "side header header header"
+    "side main main main"
+    "side main main main"
+    "side main main main"
+    "side main main main";
+
+
+                            
 }
 
 .side{
+    background-color: black;
+    grid-area: side;
 
+    display: grid;
+
+    .logo{
+        .logo-image{
+            width: $logo-width;
+        }
+        .logo-title{
+            color: white;
+            grid-column: text;
+            grid-row: 1;
+        }
+    }
+
+    .menu{
+        .menu-items{
+            color: white;
+            grid-column: menu-text;
+        }
+
+        .menu-icons{
+            width: $side-icon-width;
+        }
+    }
 }
 
 .header{
+    grid-area: header;
 
 }
 
