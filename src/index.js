@@ -148,7 +148,7 @@ function dash(){
                 const container = profile.appendChild(document.createElement("div"));
                 container.setAttribute("class", "profile-icon-bg")
                 const icon = container.appendChild(document.createElement("img"));
-                icon.setAttribute("class", "profile-headeer-icon")
+                icon.setAttribute("class", "profile-header-icon")
                 icon.setAttribute("src", "assets/brain.svg");
                 icon.setAttribute("alt", "profile icon image");
             }; icon()
