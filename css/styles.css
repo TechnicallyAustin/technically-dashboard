@@ -224,7 +224,7 @@ body {
   grid-template-columns: 5fr 2fr;
 }
 .main .projects {
-  background-color: green;
+  background-color: #e0e1dd;
   padding: 2%;
   display: grid;
   grid-template-areas: "projects-title projects-title" "card card";
@@ -236,13 +236,46 @@ body {
        column-gap: 1vw;
 }
 .main .projects .project-section-title {
+  color: #1b263b;
   margin: 0;
   grid-column: projects-title;
   align-self: center;
 }
 .main .projects .project-card {
-  background-color: black;
+  background-color: #0d1b2a;
+  border-left: 15px solid rgb(207, 178, 15);
+  border-radius: 25px;
+  padding: 2%;
 }
 .main .panel {
-  background-color: green;
+  grid-column: panel;
+  background-color: #e0e1dd;
+  display: grid;
+  grid-template-areas: "top-title" "top" "bottom-title" "bottom";
+  grid-template-rows: 1fr 4fr 1fr 4fr;
+  padding: 3%;
+}
+.main .panel .announcement-title {
+  color: #1b263b;
+  grid-row: top-title;
+  align-self: center;
+  margin: 0;
+}
+.main .panel .announcements {
+  background-color: #1b263b;
+  border-radius: 25px;
+  grid-row: top;
+  padding: 8%;
+}
+.main .panel .trending-title {
+  color: #1b263b;
+  grid-row: bottom-title;
+  align-self: center;
+  margin: 0;
+}
+.main .panel .trending {
+  background-color: #1b263b;
+  border-radius: 25px;
+  grid-row: bottom;
+  padding: 8%;
 }/*# sourceMappingURL=styles.css.map */

@@ -286,7 +286,8 @@ body {
     grid-template-columns: 5fr 2fr;
 
     .projects{
-        background-color: green;
+
+        background-color: $main-color;
         padding: 2%;
 
         display: grid;
@@ -301,24 +302,65 @@ body {
         column-gap: 1vw;
 
         .project-section-title{
+            color: $header-color;
             margin: 0;
             grid-column: projects-title;
             align-self: center;
         }
 
         .project-card{
-            background-color: black;
+            background-color: $project-color;
+            border-left: 15px solid rgb(207, 178, 15);
+            border-radius: 25px;
+            padding: 2%;
+
+
             .project-title{}
             .project-description{}
-            .project-share{}
+            .project-share{
+            }
         }
     }
 
     .panel{
-        background-color: green;
-        .announcements{
-            .announcement-title{}
+        grid-column: panel;
+        background-color: $main-color;
+        display: grid;
+        grid-template-areas: 
+        "top-title"
+        "top"
+        "bottom-title"
+        "bottom";
+        grid-template-rows: 1fr 4fr 1fr 4fr;
+        padding: 3%;
+        
+        .announcement-title{
+            color: $header-color;
+            grid-row: top-title;
+            align-self: center;
+            margin: 0;
+
         }
-        .trending{}
+        .announcements{
+            background-color: $header-color;
+            
+            border-radius: 25px;
+            grid-row: top;
+            padding: 8%
+            
+
+        }
+        .trending-title{
+            color: $header-color;
+            grid-row: bottom-title;
+            align-self: center;
+            margin: 0;
+        }
+        .trending{
+            background-color: $header-color;
+            border-radius: 25px;
+            grid-row: bottom;
+            padding: 8%;
+        }
     }
 }

@@ -241,7 +241,7 @@ function dash(){
                 announcements.setAttribute("class", "announcements");
 
                 function title(){  
-                    const title = announcements.appendChild(document.createElement("h3"));
+                    const title = panel.appendChild(document.createElement("h3"));
                     title.setAttribute("class", "announcement-title");
                     title.textContent = "Announcements"
                 }; title()
@@ -263,7 +263,7 @@ function dash(){
                 trending.setAttribute("class", "trending");
 
                 function title(){
-                    const title = trending.appendChild(document.createElement("h3"));
+                    const title = panel.appendChild(document.createElement("h3"));
                     title.setAttribute("class", "trending-title");
                     title.textContent = "Trending"
                 }; title()
