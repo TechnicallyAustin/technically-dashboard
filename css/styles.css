@@ -245,7 +245,8 @@ body {
   background-color: #0d1b2a;
   border-left: 15px solid rgb(207, 178, 15);
   border-radius: 25px;
-  padding: 2%;
+  width: 95%;
+  padding: 1%;
   display: grid;
   grid-template-areas: "title" "description" "share";
   grid-template-rows: 1fr 2fr 1fr;
@@ -282,7 +283,6 @@ body {
   display: grid;
   grid-template-areas: "top-title" "top" "bottom-title" "bottom";
   grid-template-rows: 1fr 4fr 1fr 4fr;
-  padding: 3%;
 }
 .main .panel .announcement-title {
   color: #1b263b;
@@ -294,28 +294,33 @@ body {
   background-color: #1b263b;
   border-radius: 25px;
   grid-row: top;
-  padding: 8%;
   display: grid;
   grid-auto-rows: 1fr 1fr 1fr;
 }
 .main .panel .announcements .posts {
+  width: 95%;
   display: grid;
   grid-template-areas: "title" "info";
   grid-template-rows: 1fr auto-fit;
   align-items: center;
-  justify-content: center;
+  justify-self: center;
+  padding: 1%;
 }
 .main .panel .announcements .posts .post-title {
+  width: 50%;
   margin: 1%;
   font-weight: bold;
   align-self: center;
   justify-self: left;
+  margin-left: 10%;
 }
 .main .panel .announcements .posts .info {
+  width: 80%;
   border-bottom: 1px solid #e0e1dd;
   align-self: center;
   justify-self: center;
-  padding: 1%;
+  text-align: left;
+  margin-bottom: 0;
 }
 .main .panel .trending-title {
   color: #1b263b;
@@ -327,5 +332,4 @@ body {
   background-color: #1b263b;
   border-radius: 25px;
   grid-row: bottom;
-  padding: 8%;
 }/*# sourceMappingURL=styles.css.map */

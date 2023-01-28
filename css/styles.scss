@@ -312,7 +312,8 @@ body {
             background-color: $project-color;
             border-left: 15px solid rgb(207, 178, 15);
             border-radius: 25px;
-            padding: 2%;
+            width: 95%;
+            padding: 1%;
 
             display: grid;
             grid-template-areas:
@@ -362,7 +363,7 @@ body {
         "bottom-title"
         "bottom";
         grid-template-rows: 1fr 4fr 1fr 4fr;
-        padding: 3%;
+
         
         .announcement-title{
             color: $header-color;
@@ -376,12 +377,13 @@ body {
             
             border-radius: 25px;
             grid-row: top;
-            padding: 8%;
+
 
             display: grid;
             grid-auto-rows: 1fr 1fr 1fr;
 
             .posts{
+                width: 95%;
                 display: grid;
                 grid-template-areas:
                 "title"
@@ -389,20 +391,26 @@ body {
                 grid-template-rows: 1fr auto-fit;
                 
                 align-items: center;
-                justify-content: center;
+                justify-self: center;
+                padding: 1%;
 
 
                 .post-title{
+                    width: 50%;
                     margin: 1%;
                     font-weight: bold;
                     align-self: center;
                     justify-self: left;
+                    margin-left: 10%;
                 }
                 .info{
+                    width: 80%;
                     border-bottom: 1px solid $main-color;
                     align-self: center;
                     justify-self: center;
-                    padding: 1%;
+                    text-align: left;
+                    margin-bottom: 0;
+
                 }
             }
 
@@ -422,7 +430,6 @@ body {
             background-color: $header-color;
             border-radius: 25px;
             grid-row: bottom;
-            padding: 8%;
         }
     }
 }
