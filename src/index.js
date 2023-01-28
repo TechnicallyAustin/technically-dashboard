@@ -231,7 +231,7 @@ function dash(){
                 network.setAttribute("alt", "share network icon");
             }
         }; projects()
-
+        
         function panel(){
             const panel = main.appendChild(document.createElement("div"));
             panel.setAttribute("class", "panel")
@@ -264,7 +264,7 @@ function dash(){
 
                         let info = container.appendChild(document.createElement("p"));
                         info.setAttribute("class", `${post.toLowerCase()} info`)
-                        info.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
+                        info.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.";
 
                     }
                   }; post()
@@ -284,8 +284,35 @@ function dash(){
         
 
                 function content(){
+                    const userArray = ["Austin","Jada","Jordan","Dylan", "Adrian"]
+                    for (let i = 0; i < userArray.length; i++){
+                        let user = userArray[i]
+                        let container = trending.appendChild(document.createElement("div"))
+                        container.setAttribute("class",`${user.toLowerCase()}-container users`)
 
-                }
+                        let iconBg = container.appendChild(document.createElement("div"));
+                        iconBg.setAttribute("class", "user-bg")
+
+                        let icon = iconBg.appendChild(document.createElement("img"))
+                        icon.setAttribute("class", "user-icon")
+                        icon.setAttribute("src", "");
+                        icon.setAttribute("alt", "icon for the users profile");
+
+                        let userBox = container.appendChild(document.createElement("div"))
+                        userBox.setAttribute("class", "user-info")
+
+                        let name = userBox.appendChild(document.createElement("p"));
+                        name.setAttribute("class", "user-name")
+                        name.textContent = `@${user}`
+
+                        let info = userBox.appendChild(document.createElement("p"));
+                        info.setAttribute("class", "info-text");
+                        info.textContent = "Lorem ipsum etoch iglooe haggle"
+
+
+                    }
+
+                }; content()
 
 
 

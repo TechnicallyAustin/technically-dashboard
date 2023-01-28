@@ -10,8 +10,7 @@ $project-color: #0d1b2a;
 $alt-color: #415a77;
 
 *{
-    margin-top: 0;
-    margin-left: 0;
+    margin: 0;
 }
 
 body {
@@ -143,7 +142,7 @@ body {
     "search  profile"
     "welcome button";
   grid-template-columns: 6fr 3fr;
-  row-gap: 3vh;
+  row-gap: 1vh;
 
   .search {
     display: grid;
@@ -280,40 +279,47 @@ body {
 }
 
 .main {
+    background-color: $main-color;
     display: grid;
     grid-template-areas:
     "project panel";
-    grid-template-columns: 5fr 2fr;
+    grid-template-columns: 7fr 3fr;
+    column-gap: 1vh;
+    padding: 2%;
+
 
     .projects{
-
+        grid-column: project;
         background-color: $main-color;
-        padding: 2%;
 
         display: grid;
         grid-template-areas:
-        "projects-title projects-title"
+        "title title"
         "card card";
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 7fr;
-        grid-auto-rows: 8fr;
-
-        row-gap: 2vh;
+        grid-template-rows: 1fr 5fr;
+        grid-auto-rows: 5fr;
+        row-gap: 1vh;
         column-gap: 1vw;
+        justify-content: center;
+
+
+
 
         .project-section-title{
+            grid-area: title;
             color: $header-color;
-            margin: 0;
-            grid-column: projects-title;
             align-self: center;
+            font-size: 22px;
         }
 
         .project-card{
             background-color: $project-color;
             border-left: 15px solid rgb(207, 178, 15);
             border-radius: 25px;
-            width: 95%;
-            padding: 1%;
+
+
+
 
             display: grid;
             grid-template-areas:
@@ -324,16 +330,20 @@ body {
             align-items: center;
 
 
+
             .project-title{
+                width: 80%;
                 margin: 0;
                 grid-row: title;
-                align-self: center;
-                justify-self: left;
+                align-content: center;
+                justify-self: center;
             }
             .project-description{
+                width: 80%;
                 margin: 0;
                 grid-row: description;
-                align-self: flex-start
+                align-self: flex-start;
+                justify-self: center;
             }
             .project-share{
                 grid-row: share;
@@ -351,85 +361,75 @@ body {
                 }
             }
         }
+        
     }
-
     .panel{
+        display: grid;
         grid-column: panel;
         background-color: $main-color;
-        display: grid;
-        grid-template-areas: 
-        "top-title"
-        "top"
-        "bottom-title"
-        "bottom";
-        grid-template-rows: 1fr 4fr 1fr 4fr;
+        grid-template-areas:
+        "announce"
+        "posts"
+        "trending"
+        "accounts";
+        grid-template-rows: 1fr 7.5fr 1fr 7.5fr;
+        row-gap: 1vh;
 
-        
         .announcement-title{
             color: $header-color;
-            grid-row: top-title;
+            grid-area: announce;
             align-self: center;
-            margin: 0;
+            font-size: 22px;
+
 
         }
         .announcements{
-            background-color: $header-color;
-            
+
             border-radius: 25px;
-            grid-row: top;
-
-
+            background-color: $side-color;
             display: grid;
-            grid-auto-rows: 1fr 1fr 1fr;
+            grid-area: posts;
+            justify-items: center;
+            font-size: 14px;
 
             .posts{
-                width: 95%;
+                color: white;
+                width: 70%;
                 display: grid;
-                grid-template-areas:
+                grid-template-areas: 
                 "title"
                 "info";
-                grid-template-rows: 1fr auto-fit;
-                
-                align-items: center;
-                justify-self: center;
-                padding: 1%;
+                grid-auto-rows: 1fr 4fr;
+                align-self: center;
+
 
 
                 .post-title{
-                    width: 50%;
-                    margin: 1%;
-                    font-weight: bold;
-                    align-self: center;
-                    justify-self: left;
-                    margin-left: 10%;
+                    margin: 0;
                 }
                 .info{
-                    width: 80%;
+                    margin: 0;
                     border-bottom: 1px solid $main-color;
-                    align-self: center;
-                    justify-self: center;
-                    text-align: left;
-                    margin-bottom: 0;
+                }
 
+                .third:last-child{
+                    border-bottom: none;
                 }
             }
 
-
-
-
-            
-
         }
         .trending-title{
-            color: $header-color;
-            grid-row: bottom-title;
+            grid-area: trending;
             align-self: center;
-            margin: 0;
+            font-size: 22px;
+            color: $header-color;
+
         }
         .trending{
-            background-color: $header-color;
+            background-color: $side-color;
+            grid-area: accounts;
             border-radius: 25px;
-            grid-row: bottom;
         }
     }
+
 }
