@@ -1,16 +1,25 @@
+* {
+  margin-top: 0;
+  margin-left: 0;
+}
+
 body {
+  height: 100vh;
   display: grid;
-  grid-template-areas: "side header header header" "side header header header" "side main main main" "side main main main" "side main main main" "side main main main";
+  grid-template-areas: "side header" "side main";
+  grid-template-columns: 1fr 5fr;
   color: white;
 }
 
 .side {
+  height: 100vh;
   background-color: #778da9;
   grid-area: side;
   display: grid;
   grid-template-areas: "logo" "menu" "option";
-  grid-template-rows: 1fr 4fr 2fr 6fr;
-  row-gap: 4%;
+  grid-template-rows: 1fr 4fr 2fr 3fr;
+  row-gap: 3vh;
+  padding-top: 2%;
 }
 .side .logo {
   width: 80%;
@@ -20,9 +29,10 @@ body {
   grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-content: center;
+  padding: 4%;
 }
 .side .logo .logo-image {
-  width: 6vw;
+  width: 4vw;
   grid-area: image;
   align-items: center;
   justify-self: center;
@@ -47,6 +57,7 @@ body {
   grid-template-areas: "icon text";
   grid-template-columns: 1fr 2fr;
   align-items: center;
+  justify-items: center;
 }
 .side .menu .item-box .menu-icons {
   width: 2vw;
@@ -95,7 +106,7 @@ body {
   display: grid;
   grid-template-areas: "search  profile" "welcome button";
   grid-template-columns: 6fr 3fr;
-  row-gap: 2vh;
+  row-gap: 3vh;
 }
 .header .search {
   display: grid;
@@ -206,4 +217,32 @@ body {
   border-radius: 25px;
   align-items: center;
   justify-items: center;
+}
+.main {
+  display: grid;
+  grid-template-areas: "project panel";
+  grid-template-columns: 5fr 2fr;
+}
+.main .projects {
+  background-color: green;
+  padding: 2%;
+  display: grid;
+  grid-template-areas: "projects-title projects-title" "card card";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 7fr;
+  grid-auto-rows: 8fr;
+  row-gap: 2vh;
+  -moz-column-gap: 1vw;
+       column-gap: 1vw;
+}
+.main .projects .project-section-title {
+  margin: 0;
+  grid-column: projects-title;
+  align-self: center;
+}
+.main .projects .project-card {
+  background-color: black;
+}
+.main .panel {
+  background-color: green;
 }/*# sourceMappingURL=styles.css.map */

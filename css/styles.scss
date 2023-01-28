@@ -1,4 +1,4 @@
-$logo-width: 6vw;
+$logo-width: 4vw;
 $side-icon-width: 2vw;
 $profile-icon-width: 2vw;
 $welcome-icon-width: 4vw;
@@ -9,21 +9,23 @@ $main-color: #e0e1dd;
 $project-color: #0d1b2a;
 $alt-color: #415a77;
 
-
+*{
+    margin-top: 0;
+    margin-left: 0;
+}
 
 body {
+    height: 100vh;
   display: grid;
   grid-template-areas:
-    "side header header header"
-    "side header header header"
-    "side main main main"
-    "side main main main"
-    "side main main main"
-    "side main main main";
+    "side header"
+    "side main";
+    grid-template-columns: 1fr 5fr;
     color: white;
 }
 
 .side {
+    height: 100vh;
   background-color: $side-color;
   grid-area: side;
 
@@ -32,8 +34,10 @@ body {
     "logo"
     "menu"
     "option";
-  grid-template-rows: 1fr 4fr 2fr 6fr;
-  row-gap: 4%;
+  grid-template-rows: 1fr 4fr 2fr 3fr;
+  row-gap: 3vh;
+  padding-top: 2%;
+
 
   .logo {
     width: 80%;
@@ -44,6 +48,7 @@ body {
     grid-template-columns: 1fr 2fr;
     align-items: center;
     justify-content: center;
+    padding: 4%;
 
     .logo-image {
       width: $logo-width;
@@ -75,6 +80,7 @@ body {
       grid-template-areas: "icon text";
       grid-template-columns: 1fr 2fr;
       align-items: center;
+      justify-items: center;
       
 
       .menu-icons {
@@ -137,7 +143,7 @@ body {
     "search  profile"
     "welcome button";
   grid-template-columns: 6fr 3fr;
-  row-gap: 2vh;
+  row-gap: 3vh;
 
   .search {
     display: grid;
@@ -274,5 +280,45 @@ body {
 }
 
 .main {
-    
+    display: grid;
+    grid-template-areas:
+    "project panel";
+    grid-template-columns: 5fr 2fr;
+
+    .projects{
+        background-color: green;
+        padding: 2%;
+
+        display: grid;
+        grid-template-areas:
+        "projects-title projects-title"
+        "card card";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 7fr;
+        grid-auto-rows: 8fr;
+
+        row-gap: 2vh;
+        column-gap: 1vw;
+
+        .project-section-title{
+            margin: 0;
+            grid-column: projects-title;
+            align-self: center;
+        }
+
+        .project-card{
+            background-color: black;
+            .project-title{}
+            .project-description{}
+            .project-share{}
+        }
+    }
+
+    .panel{
+        background-color: green;
+        .announcements{
+            .announcement-title{}
+        }
+        .trending{}
+    }
 }
