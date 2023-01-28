@@ -314,10 +314,40 @@ body {
             border-radius: 25px;
             padding: 2%;
 
+            display: grid;
+            grid-template-areas:
+            "title"
+            "description"
+            "share";
+            grid-template-rows: 1fr 2fr 1fr;
+            align-items: center;
 
-            .project-title{}
-            .project-description{}
+
+            .project-title{
+                margin: 0;
+                grid-row: title;
+                align-self: center;
+                justify-self: left;
+            }
+            .project-description{
+                margin: 0;
+                grid-row: description;
+                align-self: flex-start
+            }
             .project-share{
+                grid-row: share;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                width: 40%;
+                height: 3vh;
+                align-items: center;
+                justify-self: right;
+
+                .share-icons{
+                    height: 2vh;
+                    width: auto;
+                    align-self: center;
+                }
             }
         }
     }

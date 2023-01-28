@@ -218,17 +218,17 @@ function dash(){
                 share.setAttribute("class", "project-share")
 
                 let star = share.appendChild(document.createElement("img"));
-                star.setAttribute("class", "")
-                star.setAttribute("src", "");
-                star.setAttribute("alt", "");
+                star.setAttribute("class", 'share-icons')
+                star.setAttribute("src", "assets_v2/star.svg");
+                star.setAttribute("alt", "share star icon");
                 let eye = share.appendChild(document.createElement("img"));
-                eye.setAttribute("class", "");
-                eye.setAttribute("src", "");
-                eye.setAttribute("alt", "");
+                eye.setAttribute("class", 'share-icons');
+                eye.setAttribute("src", "assets_v2/eye.svg");
+                eye.setAttribute("alt", "share eye icon");
                 let network = share.appendChild(document.createElement("img"));
-                eye.setAttribute("class", "");
-                eye.setAttribute("src", "");
-                eye.setAttribute("alt", "");
+                network.setAttribute("class", 'share-icons');
+                network.setAttribute("src", "assets_v2/share.svg");
+                network.setAttribute("alt", "share network icon");
             }
         }; projects()
 

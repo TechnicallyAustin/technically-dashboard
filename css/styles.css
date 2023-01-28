@@ -246,6 +246,35 @@ body {
   border-left: 15px solid rgb(207, 178, 15);
   border-radius: 25px;
   padding: 2%;
+  display: grid;
+  grid-template-areas: "title" "description" "share";
+  grid-template-rows: 1fr 2fr 1fr;
+  align-items: center;
+}
+.main .projects .project-card .project-title {
+  margin: 0;
+  grid-row: title;
+  align-self: center;
+  justify-self: left;
+}
+.main .projects .project-card .project-description {
+  margin: 0;
+  grid-row: description;
+  align-self: flex-start;
+}
+.main .projects .project-card .project-share {
+  grid-row: share;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 40%;
+  height: 3vh;
+  align-items: center;
+  justify-self: right;
+}
+.main .projects .project-card .project-share .share-icons {
+  height: 2vh;
+  width: auto;
+  align-self: center;
 }
 .main .panel {
   grid-column: panel;
