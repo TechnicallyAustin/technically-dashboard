@@ -7,8 +7,9 @@ body {
   background-color: black;
   grid-area: side;
   display: grid;
-  grid-template-areas: "logo logo" "menu menu" "option option";
-  grid-template-rows: 1fr 8fr 2fr;
+  grid-template-areas: "logo" "menu" "option";
+  grid-template-rows: 1fr 4fr 2fr 6fr;
+  row-gap: 2%;
 }
 .side .logo {
   grid-area: logo;
@@ -58,16 +59,24 @@ body {
 .side .options {
   grid-area: option;
   display: grid;
-  grid-template-areas: "icon text";
+  grid-template-areas: "item";
   align-items: center;
 }
-.side .options .option-icons {
+.side .options .item-box {
+  grid-column: item;
+  display: grid;
+  grid-template-areas: "icon text";
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  justify-content: center;
+}
+.side .options .item-box .option-icons {
   width: 2vw;
   grid-column: icon;
   align-items: center;
   justify-self: center;
 }
-.side .options .option-items {
+.side .options .item-box .option-items {
   color: white;
   grid-column: text;
   align-items: center;
@@ -76,16 +85,66 @@ body {
 
 .header {
   grid-area: header;
+  background-color: green;
+  padding: 3%;
+  display: grid;
+  grid-template-areas: "search  profile" "welcome button";
+  grid-template-columns: 6fr 1fr;
+}
+.header .search {
+  display: grid;
+  grid-template-areas: "icon input";
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 1fr 3fr;
+  align-items: center;
+  justify-content: center;
 }
 .header .search .search-icon {
   width: 2vw;
+  align-self: center;
+  justify-self: center;
+}
+.header .welcome {
+  grid-column: welcome;
+  display: grid;
+  grid-template-areas: "icon message";
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+  justify-content: center;
 }
 .header .welcome .welcome-icon-bg {
+  background-color: black;
   width: 6vw;
+  height: 9vh;
+  border-radius: 50%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.header .welcome .welcome-icon {
+  align-items: center;
+  justify-content: center;
+  width: 5vw;
+}
+.header .welcome .welcome-message {
+  display: grid;
+  grid-template-areas: "message";
+}
+.header .welcome .message-text {
+  margin: 0;
+}
+.header .welcome .welcome-name {
+  margin: 0;
+}
+.header .profile-controls {
+  grid-area: profile;
 }
 .header .profile-controls .notify-icon {
   width: 2vw;
 }
 .header .profile-controls .profile-icon-bg {
   width: 2vw;
+}
+.header .header-button {
+  grid-area: button;
 }/*# sourceMappingURL=styles.css.map */

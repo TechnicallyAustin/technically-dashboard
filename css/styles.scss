@@ -1,166 +1,209 @@
 $logo-width: 6vw;
 $side-icon-width: 2vw;
 $profile-icon-width: 2vw;
-$welcome-icon-width: 4vw;
-$header-color: #778DA9;
-$side-color: #1B263B;
-$main-color: #E0E1DD;
-$project-color: #0D1B2A;
-$alt-color: #415A77;
-
+$welcome-icon-width: 5vw;
+$welcome-icon-height: 7vh;
+$header-color: #778da9;
+$side-color: #1b263b;
+$main-color: #e0e1dd;
+$project-color: #0d1b2a;
+$alt-color: #415a77;
 
 body {
-    display: grid;
-    grid-template-areas:
+  display: grid;
+  grid-template-areas:
     "side header header header"
     "side header header header"
     "side main main main"
     "side main main main"
     "side main main main"
     "side main main main";
-
-
-                            
 }
 
-.side{
-    background-color: black;
-    grid-area: side;
+.side {
+  background-color: black;
+  grid-area: side;
+
+  display: grid;
+  grid-template-areas:
+    "logo"
+    "menu"
+    "option";
+  grid-template-rows: 1fr 4fr 2fr 6fr;
+  row-gap: 2%;
+
+  .logo {
+    grid-area: logo;
 
     display: grid;
-    grid-template-areas:
-    "logo logo"
-    "menu menu"
-    "option option";
-    grid-template-rows: 1fr 8fr 2fr;
+    grid-template-areas: "image text";
+    align-items: center;
+    justify-content: center;
 
-    .logo{
-        grid-area: logo;
-
-        display: grid;
-        grid-template-areas: 
-        "image text"
-        ;
-        align-items: center;
-        justify-content: center;
-
-        .logo-image{
-            width: $logo-width;
-            grid-area: image;
-            align-items: center;
-            justify-self: center;
-        }
-        .logo-title{
-            color: white;
-            grid-area: text;
-            align-items: center;
-            justify-self: center;
-
-        }
+    .logo-image {
+      width: $logo-width;
+      grid-area: image;
+      align-items: center;
+      justify-self: center;
     }
 
-    .menu{
-        grid-area: menu;
-        display: grid;
-        grid-template-areas: "item";
-        align-items: center;
-
-        .item-box{
-            grid-column: item;
-            display: grid;
-            grid-template-areas:
-            "icon text";
-            grid-template-columns: 1fr 4fr;
-            align-items: center;
-            justify-content: center;
-
-            .menu-icons{
-                width: $side-icon-width;
-                grid-column: icon;
-                align-items: center;
-                justify-self: center;
-            }
-            .menu-items{
-                color: white;
-                grid-column: text;
-                align-items: center;
-                justify-self: left;
-            }
-        }
-
-
+    .logo-title {
+      color: white;
+      grid-area: text;
+      align-items: center;
+      justify-self: center;
     }
+  }
 
-    .options{
+  .menu {
+    grid-area: menu;
+    display: grid;
+    grid-template-areas: "item";
+    align-items: center;
 
-        grid-area: option;
-        display: grid;
-        grid-template-areas: "icon text";
+    .item-box {
+      grid-column: item;
+      display: grid;
+      grid-template-areas: "icon text";
+      grid-template-columns: 1fr 4fr;
+      align-items: center;
+      justify-content: center;
 
+      .menu-icons {
+        width: $side-icon-width;
+        grid-column: icon;
+        align-items: center;
+        justify-self: center;
+      }
+
+      .menu-items {
+        color: white;
+        grid-column: text;
+        align-items: center;
+        justify-self: left;
+      }
+    }
+  }
+
+  .options {
+    grid-area: option;
+    display: grid;
+    grid-template-areas: "item";
+    align-items: center;
+
+    .item-box {
+      grid-column: item;
+      display: grid;
+      grid-template-areas: "icon text";
+      grid-template-columns: 1fr 4fr;
+      align-items: center;
+      justify-content: center;
+
+      .option-icons {
+        width: $side-icon-width;
+        grid-column: icon;
 
         align-items: center;
+        justify-self: center;
+      }
 
-        .option-icons{
-            width: $side-icon-width;
-            grid-column: icon;
-
-            align-items: center;
-            justify-self: center;
-
-        }
-        .option-items{
-            color: white;
-            grid-column: text;
-            align-items: center;
-            justify-content: left;
-        }
-
+      .option-items {
+        color: white;
+        grid-column: text;
+        align-items: center;
+        justify-content: left;
+      }
     }
+  }
 }
 
-.header{
-    grid-area: header;
+.header {
+  grid-area: header;
+  background-color: green;
+  padding: 3%;
 
-    .search{
-        .search-icon{
-            width: $side-icon-width;
-        }
-        .search-input{}
+  display: grid;
+  grid-template-areas:
+    "search  profile"
+    "welcome button";
+  grid-template-columns: 6fr 1fr;
+
+  .search {
+    display: grid;
+    grid-template-areas: "icon input";
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 3fr;
+
+    align-items: center;
+    justify-content: center;
+
+    .search-icon {
+        width: $side-icon-width;
+        align-self: center;
+        justify-self: center;
     }
-
-    .welcome{
-        .welcome-icon-bg{
-            width: $logo-width;
-        }
-        .welcome-icon{
-
-        }
-        .welcome-message{}
-        .welcome-text{}
-        .welcome-name{}
+    .search-input {
     }
+  }
 
-    .profile-controls{
+  .welcome {
+    grid-column: welcome;
+    display: grid;
+    grid-template-areas: "icon message";
+    grid-template-columns: 1fr 5fr;
 
-        .notify-icon{
-            width: $side-icon-width
-        }
-        .profile-icon-bg{
-            width: $side-icon-width;
-        }
-        .profile-header-icon{
-        }
-        .profile-bg{}
-        .profile-name{}
+    align-items: center;
+    justify-content: center;
+
+    .welcome-icon-bg {
+      background-color: black;
+      width: $logo-width;
+      height: calc($welcome-icon-height + 2vh);
+      border-radius: 50%;
+
+      display: grid;
+      align-items: center;
+      justify-content: center;
     }
-
-    .header-button{
-        .profile-button{}
+    .welcome-icon {
+      align-items: center;
+      justify-content: center;
+      width: $welcome-icon-width;
     }
+    .welcome-message {
+      display: grid;
+      grid-template-areas: "message";
+    }
+    .message-text {
+      margin: 0;
+    }
+    .welcome-name {
+      margin: 0;
+    }
+  }
 
+  .profile-controls {
+    grid-area: profile;
+    .notify-icon {
+      width: $side-icon-width;
+    }
+    .profile-icon-bg {
+      width: $side-icon-width;
+    }
+    .profile-header-icon {
+    }
+    .profile-bg {
+    }
+    .profile-name {
+    }
+  }
+
+  .header-button {
+    grid-area: button;
+    .profile-button {
+    }
+  }
 }
 
-.main{
-
+.main {
 }
-

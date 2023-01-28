@@ -5,21 +5,24 @@ function dash(){
         side.setAttribute("class", "side")
 
         function logo(){
-            const logo = side.appendChild(document.createElement("img"))
+            const logo = side.appendChild(document.createElement("div"))
             logo.setAttribute("class", "logo")
-            logo.setAttribute("src", "assets_v2/logo.svg");
-            logo.setAttribute("alt", "dashboard logo")
+            const logoImage = logo.appendChild(document.createElement("img"))
+            logoImage.setAttribute("class", "logo-image")
+            logoImage.setAttribute("src", "assets_v2/logo.svg");
+            logoImage.setAttribute("alt", "dashboard logo")
 
-            const title = side.appendChild(document.createElement("h1"));
+            const title = logo.appendChild(document.createElement("h2"));
             title.setAttribute("class", "logo-title");
-            title.textContent = "Technically Dashboard"
+            title.textContent = "Technically" +"\n" + "Dashboard"
         }; logo()
 
         function menu(){
+            const menu = side.appendChild(document.createElement("div"))
+            menu.setAttribute("class","menu")
             const menuArray = [
             "Home","Profile","Messages",
-            "History","Tasks","Communities",
-            "Settings","Support","Privacy"]
+            "History","Tasks","Communities"]
 
             const iconArray = [
               "assets_v2/home.svg",
@@ -27,27 +30,57 @@ function dash(){
               "assets_v2/messages.svg",
               "assets_v2/history.svg",
               "assets_v2/tasks.svg",
-              "assets_v2/groups.svg",
-              "assets_v2/settings.svg",
-              "assets_v2/help.svg",
-              "assets_v2/privacy.svg",
-            ];
+              "assets_v2/groups.svg"]
 
             for (let i = 0 ; i < menuArray.length; i++){
-                let menu = menuArray[i];
+                let menuItem = menuArray[i];
                 let icon = iconArray[i];
-
-                let item = side.appendChild(document.createElement("h3"));
-                item.setAttribute("class", `menu-items ${menu.toLowerCase()}`);
-                item.textContent = menu;
-    
-                let image = side.appendChild(document.createElement("img"));
-                image.setAttribute("class", `menu-icons ${menu.toLowerCase()}-icon`)
+                let container = menu.appendChild(document.createElement("div"))
+                container.setAttribute("class", `${menuItem.toLowerCase()} item-box`)
+                let image = container.appendChild(document.createElement("img"));
+                image.setAttribute("class", `menu-icons ${menuItem.toLowerCase()}-icon`)
                 image.setAttribute("src", `${icon}`)
-                image.setAttribute("alt", `image for the ${menu} menu item`)
+                image.setAttribute("alt", `image for the ${menuItem} menu item`)
+
+                let item = container.appendChild(document.createElement("h3"));
+                item.setAttribute("class", `menu-items ${menuItem.toLowerCase()}`);
+                item.textContent = menuItem;
+    
 
                 }; 
         }; menu()
+
+        function options(){
+            const options = side.appendChild(document.createElement("div"));
+            options.setAttribute("class", "options");
+            
+            const itemArray =["Settings","Support","Privacy"]
+            const iconArray = [
+            "assets_v2/settings.svg",
+            "assets_v2/help.svg",
+            "assets_v2/privacy.svg"];
+
+            for (let i = 0 ; i < itemArray.length; i++){
+                let menuItem = itemArray[i];
+                let icon = iconArray[i];
+
+                let container = options.appendChild(document.createElement("div"))
+                container.setAttribute("class", `${menuItem.toLowerCase()} item-box`)
+
+                let image = container.appendChild(document.createElement("img"));
+                image.setAttribute("class", `option-icons ${menuItem.toLowerCase()}-icon`)
+                image.setAttribute("src", `${icon}`)
+                image.setAttribute("alt", `image for the ${menuItem} option item`)
+
+                let item = container.appendChild(document.createElement("h3"));
+                item.setAttribute("class", `option-items ${menuItem.toLowerCase()}`);
+                item.textContent = menuItem;
+    
+
+                }; 
+
+
+        }; options()  
 
     }; side()
 
@@ -80,7 +113,7 @@ function dash(){
 
             function icon(){
                 const container = welcome.appendChild(document.createElement("div"));
-                container.setAttribute("class", "welcome-icon-background")
+                container.setAttribute("class", "welcome-icon-bg")
                 const icon = container.appendChild(document.createElement("img"));
                 icon.setAttribute("class", "welcome-icon")  
                 icon.setAttribute("src", "assets/brain.svg");            
@@ -102,7 +135,7 @@ function dash(){
 
         function profile(){
             const profile = header.appendChild(document.createElement("div"));
-            profile.setAttribute("class", "profile-header");
+            profile.setAttribute("class", "profile-controls");
 
             function notifications(){
                 const notification = profile.appendChild(document.createElement("img"));
@@ -115,7 +148,7 @@ function dash(){
                 const container = profile.appendChild(document.createElement("div"));
                 container.setAttribute("class", "profile-icon-bg")
                 const icon = container.appendChild(document.createElement("img"));
-                icon.setAttribute("class", "profile-container-icon")
+                icon.setAttribute("class", "profile-headeer-icon")
                 icon.setAttribute("src", "assets/brain.svg");
                 icon.setAttribute("alt", "profile icon image");
             }; icon()
@@ -136,7 +169,7 @@ function dash(){
                 let button = buttonsArray[i]
                 console.log(button)
                 let newButton = container.appendChild(document.createElement("button"));
-                newButton.setAttribute("class", `${button.toLowerCase()} profile-button`)
+                newButton.setAttribute("class", `${button.toLowerCase()} header-button`)
                 newButton.setAttribute("type", "")
                 newButton.setAttribute("value", `${button}`)
                 newButton.textContent = button
