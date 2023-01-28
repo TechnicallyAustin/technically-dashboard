@@ -10,440 +10,458 @@ $project-color: #0d1b2a;
 $alt-color: #415a77;
 
 * {
-  margin: 0;
+    margin: 0;
 }
 
 body {
-  height: 100vh;
-  display: grid;
-  grid-template-areas:
-    "side header"
-    "side main";
-  grid-template-columns: 1fr 5fr;
-  color: white;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "side header"
+        "side main";
+    grid-template-columns: 1fr 5fr;
+    color: white;
 }
 
 .side {
-  height: 100vh;
-  background-color: $side-color;
-  grid-area: side;
-
-  display: grid;
-  grid-template-areas:
-    "logo"
-    "menu"
-    "option";
-  grid-template-rows: 1fr 4fr 2fr 3fr;
-  row-gap: 3vh;
-  padding-top: 2%;
-
-  .logo {
-    width: 80%;
-    grid-area: logo;
+    height: 100vh;
+    background-color: $side-color;
+    grid-area: side;
 
     display: grid;
-    grid-template-areas: "image text";
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
-    justify-content: center;
-    padding: 4%;
+    grid-template-areas:
+        "logo"
+        "menu"
+        "option";
+    grid-template-rows: 1fr 4fr 2fr 3fr;
+    row-gap: 3vh;
+    padding-top: 2%;
 
-    .logo-image {
-      width: $logo-width;
-      grid-area: image;
+    .logo {
+        width: 80%;
+        grid-area: logo;
 
-      align-items: center;
-      justify-self: center;
+        display: grid;
+        grid-template-areas: "image text";
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        justify-content: center;
+        padding: 4%;
+
+        .logo-image {
+            width: $logo-width;
+            grid-area: image;
+
+            align-items: center;
+            justify-self: center;
+        }
+
+        .logo-title {
+            margin: 0;
+            color: white;
+            grid-area: text;
+            align-items: center;
+            justify-self: center;
+        }
     }
 
-    .logo-title {
-      margin: 0;
-      color: white;
-      grid-area: text;
-      align-items: center;
-      justify-self: center;
+    .menu {
+        grid-area: menu;
+        display: grid;
+        grid-template-areas: "item";
+        align-items: center;
+
+        .item-box {
+            width: 80%;
+            grid-column: item;
+            display: grid;
+            grid-template-areas: "icon text";
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            justify-items: center;
+
+            .menu-icons {
+                width: $side-icon-width;
+                grid-column: icon;
+                align-items: center;
+                justify-self: center;
+            }
+
+            .menu-items {
+                color: white;
+                grid-column: text;
+                align-items: center;
+                justify-self: left;
+            }
+        }
     }
-  }
 
-  .menu {
-    grid-area: menu;
-    display: grid;
-    grid-template-areas: "item";
-    align-items: center;
-
-    .item-box {
-      width: 80%;
-      grid-column: item;
-      display: grid;
-      grid-template-areas: "icon text";
-      grid-template-columns: 1fr 2fr;
-      align-items: center;
-      justify-items: center;
-
-      .menu-icons {
-        width: $side-icon-width;
-        grid-column: icon;
+    .options {
+        width: 80%;
+        grid-area: option;
+        display: grid;
+        grid-template-areas: "item";
         align-items: center;
-        justify-self: center;
-      }
 
-      .menu-items {
-        color: white;
-        grid-column: text;
-        align-items: center;
-        justify-self: left;
-      }
+        .item-box {
+            grid-column: item;
+            display: grid;
+            grid-template-areas: "icon text";
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            justify-content: center;
+
+            .option-icons {
+                width: $side-icon-width;
+                grid-column: icon;
+
+                align-items: center;
+                justify-self: center;
+            }
+
+            .option-items {
+                color: white;
+                grid-column: text;
+                align-items: center;
+                justify-self: left;
+            }
+        }
     }
-  }
-
-  .options {
-    width: 80%;
-    grid-area: option;
-    display: grid;
-    grid-template-areas: "item";
-    align-items: center;
-
-    .item-box {
-      grid-column: item;
-      display: grid;
-      grid-template-areas: "icon text";
-      grid-template-columns: 1fr 2fr;
-      align-items: center;
-      justify-content: center;
-
-      .option-icons {
-        width: $side-icon-width;
-        grid-column: icon;
-
-        align-items: center;
-        justify-self: center;
-      }
-
-      .option-items {
-        color: white;
-        grid-column: text;
-        align-items: center;
-        justify-self: left;
-      }
-    }
-  }
 }
 
 .header {
-  grid-area: header;
-  background-color: $header-color;
+    grid-area: header;
+    background-color: $header-color;
 
-  display: grid;
-  grid-template-areas:
-    "search  profile"
-    "welcome button";
-  grid-template-columns: 6fr 3fr;
-
-
-  .search {
     display: grid;
-    grid-template-areas: "icon input";
-    grid-template-columns: 1fr 6fr;
+    grid-template-areas:
+        "search  profile"
+        "welcome button";
+    grid-template-columns: 6fr 3fr;
 
-    align-items: center;
-    justify-content: center;
 
-    .search-icon {
-      width: $side-icon-width;
-      align-self: center;
-      justify-self: center;
-    }
-    .search-input {
-      align-self: center;
-      width: 80%;
-      padding: 1%;
-      border-radius: 25px;
-    }
-  }
+    .search {
+        display: grid;
+        grid-template-areas: "icon input";
+        grid-template-columns: 1fr 6fr;
 
-  .welcome {
-    grid-column: welcome;
-    display: grid;
-    grid-template-areas: "icon message";
-    grid-template-columns: 1fr 5fr;
+        align-items: center;
+        justify-content: center;
 
-    align-items: center;
-    justify-content: center;
+        .search-icon {
+            width: $side-icon-width;
+            align-self: center;
+            justify-self: center;
+        }
 
-    .welcome-icon-bg {
-      background-color: $side-color;
-      border: 2px solid $main-color;
-      width: 4vw;
-      height: 7vh;
-      border-radius: 50%;
-
-      display: grid;
-      align-items: center;
-      justify-self: center;
-    }
-    .welcome-icon {
-      align-items: center;
-      justify-self: center;
-      width: $welcome-icon-width;
-      height: auto;
-    }
-    .welcome-message {
-      display: grid;
-      grid-template-areas: "message";
-    }
-    .message-text {
-      margin: 0;
-    }
-    .welcome-name {
-      margin: 0;
-    }
-  }
-
-  .profile-controls {
-    width: 75%;
-    grid-area: profile;
-    display: grid;
-    grid-template-areas: "notify icon name";
-    grid-template-columns: 1fr 1fr 2fr;
-
-    align-items: center;
-    justify-self: center;
-
-    column-gap: 1%;
-
-    .notify-icon {
-      width: $side-icon-width;
-      grid-column: notify;
-      align-self: center;
-      justify-self: center;
-    }
-    .profile-icon-bg {
-      border: 1px solid $main-color;
-      background-color: $side-color;
-      width: 3vw;
-      height: 5vh;
-      border-radius: 50%;
-      grid-column: icon;
-
-      display: grid;
-      align-items: center;
-      justify-self: center;
+        .search-input {
+            align-self: center;
+            width: 80%;
+            padding: 1%;
+            border-radius: 25px;
+        }
     }
 
-    .profile-header-icon {
-      height: 2vh;
-      width: auto;
-      justify-self: center;
+    .welcome {
+        grid-column: welcome;
+        display: grid;
+        grid-template-areas: "icon message";
+        grid-template-columns: 1fr 5fr;
+
+        align-items: center;
+        justify-content: center;
+
+        .welcome-icon-bg {
+            background-color: $side-color;
+            border: 2px solid $main-color;
+            width: 4vw;
+            height: 7vh;
+            border-radius: 50%;
+
+            display: grid;
+            align-items: center;
+            justify-self: center;
+        }
+
+        .welcome-icon {
+            align-items: center;
+            justify-self: center;
+            width: $welcome-icon-width;
+            height: auto;
+        }
+
+        .welcome-message {
+            display: grid;
+            grid-template-areas: "message";
+        }
+
+        .message-text {
+            margin: 0;
+        }
+
+        .welcome-name {
+            margin: 0;
+        }
     }
 
-    .profile-name {
-      margin: 0;
-      grid-column: name;
-      align-items: center;
-      justify-self: center;
+    .profile-controls {
+        width: 75%;
+        grid-area: profile;
+        display: grid;
+        grid-template-areas: "notify icon name";
+        grid-template-columns: 1fr 1fr 2fr;
+
+        align-items: center;
+        justify-self: center;
+
+        column-gap: 1%;
+
+        .notify-icon {
+            width: $side-icon-width;
+            grid-column: notify;
+            align-self: center;
+            justify-self: center;
+        }
+
+        .profile-icon-bg {
+            border: 1px solid $main-color;
+            background-color: $side-color;
+            width: 3vw;
+            height: 5vh;
+            border-radius: 50%;
+            grid-column: icon;
+
+            display: grid;
+            align-items: center;
+            justify-self: center;
+        }
+
+        .profile-header-icon {
+            height: 2vh;
+            width: auto;
+            justify-self: center;
+        }
+
+        .profile-name {
+            margin: 0;
+            grid-column: name;
+            align-items: center;
+            justify-self: center;
+        }
     }
-  }
 
-  .buttons {
-    grid-area: button;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 5%;
+    .buttons {
+        grid-area: button;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 5%;
 
-    align-self: center;
-    justify-content: center;
-    padding: 3%;
+        align-self: center;
+        justify-content: center;
+        padding: 3%;
 
-    .header-button {
-      background-color: $alt-color;
-      color: white;
-      border: 2px solid $main-color;
-      height: 4vh;
-      border-radius: 25px;
+        .header-button {
+            background-color: $alt-color;
+            color: white;
+            border: 2px solid $main-color;
+            height: 4vh;
+            border-radius: 25px;
 
-      align-items: center;
-      justify-items: center;
+            align-items: center;
+            justify-items: center;
+        }
     }
-  }
 }
 
 .main {
-  background-color: $main-color;
-  display: grid;
-  grid-template-areas: "project panel";
-  grid-template-columns: 7fr 3fr;
-  column-gap: 1vh;
-  padding: 2%;
-
-  .projects {
-    grid-column: project;
     background-color: $main-color;
-
     display: grid;
-    grid-template-areas:
-      "title title"
-      "card card";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 5fr;
-    grid-auto-rows: 5fr;
-    row-gap: 1vh;
-    column-gap: 1vw;
-    justify-content: center;
+    grid-template-areas: "project panel";
+    grid-template-columns: 7fr 3fr;
+    column-gap: 1vh;
+    padding: 2%;
 
-    .project-section-title {
-      grid-area: title;
-      color: $header-color;
-      align-self: center;
-      font-size: 22px;
-    }
+    .projects {
+        grid-column: project;
+        background-color: $main-color;
 
-    .project-card {
-      background-color: $project-color;
-      border-left: 15px solid rgb(207, 178, 15);
-      border-radius: 25px;
-
-      display: grid;
-      grid-template-areas:
-        "title"
-        "description"
-        "share";
-      grid-template-rows: 1fr 2fr 1fr;
-      align-items: center;
-
-      .project-title {
-        width: 80%;
-        margin: 0;
-        grid-row: title;
-        align-content: center;
-        justify-self: center;
-      }
-      .project-description {
-        width: 80%;
-        margin: 0;
-        grid-row: description;
-        align-self: flex-start;
-        justify-self: center;
-      }
-      .project-share {
-        grid-row: share;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        width: 40%;
-        height: 3vh;
-        align-items: center;
-        justify-self: right;
-
-        .share-icons {
-          height: 2vh;
-          width: auto;
-          align-self: center;
-        }
-      }
-    }
-  }
-  .panel {
-    display: grid;
-    grid-column: panel;
-    background-color: $main-color;
-    grid-template-areas:
-      "announce"
-      "posts"
-      "trending"
-      "accounts";
-    grid-template-rows: 1fr 7.5fr 1fr 7.5fr;
-    row-gap: 1vh;
-
-    .announcement-title {
-      color: $header-color;
-      grid-area: announce;
-      align-self: center;
-      font-size: 22px;
-    }
-    .announcements {
-      border-radius: 25px;
-      background-color: $side-color;
-      display: grid;
-      grid-area: posts;
-      justify-items: center;
-      font-size: 14px;
-
-      .posts {
-        color: white;
-        width: 80%;
         display: grid;
         grid-template-areas:
-          "title"
-          "info";
-        grid-auto-rows: 1fr 4fr;
-        align-self: center;
+            "title title"
+            "card card";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 5fr;
+        grid-auto-rows: 5fr;
+        row-gap: 1vh;
+        column-gap: 1vw;
+        justify-content: center;
 
-        .post-title {
-          margin: 0;
-        }
-        .info {
-          margin: 0;
-          border-bottom: 1px solid $main-color;
-        }
-
-        .third:last-child {
-          border-bottom: none;
-        }
-      }
-    }
-    .trending-title {
-      grid-area: trending;
-      align-self: center;
-      font-size: 22px;
-      color: $header-color;
-    }
-    .trending {
-      background-color: $side-color;
-      grid-area: accounts;
-      border-radius: 25px;
-
-      display: grid;
-      grid-auto-rows: 1fr;
-      justify-items: center;
-      .users {
-        display: grid;
-        grid-template-areas: "icon info";
-        grid-template-columns: 1fr 4fr;
-        width: 80%;
-        align-items: center;
-        column-gap: 3%;
-
-        .user-bg {
-            background-color: $alt-color;
-            border-radius: 50%;
-            justify-items: center;
-            height: 5vh;
-            width: 3vw;
-
-            display: grid;
-            align-content: center;
-            justify-content: center;
-
-        }
-        .user-icon {
-            width: 2vw;
-            height: auto;
+        .project-section-title {
+            grid-area: title;
+            color: $header-color;
             align-self: center;
+            font-size: 22px;
+        }
+
+        .project-card {
+            background-color: $project-color;
+            border-left: 15px solid rgb(207, 178, 15);
+            border-radius: 25px;
+
+            display: grid;
+            grid-template-areas:
+                "title"
+                "description"
+                "share";
+            grid-template-rows: 1fr 2fr 1fr;
+            align-items: center;
+
+            .project-title {
+                width: 80%;
+                margin: 0;
+                grid-row: title;
+                align-content: center;
+                justify-self: center;
+            }
+
+            .project-description {
+                width: 80%;
+                margin: 0;
+                grid-row: description;
+                align-self: flex-start;
+                justify-self: center;
+            }
+
+            .project-share {
+                grid-row: share;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                width: 40%;
+                height: 3vh;
+                align-items: center;
+                justify-self: right;
+
+                .share-icons {
+                    height: 2vh;
+                    width: auto;
+                    align-self: center;
+                }
+            }
+        }
+    }
+
+    .panel {
+        display: grid;
+        grid-column: panel;
+        background-color: $main-color;
+        grid-template-areas:
+            "announce"
+            "posts"
+            "trending"
+            "accounts";
+        grid-template-rows: 1fr 7.5fr 1fr 7.5fr;
+        row-gap: 1vh;
+
+        .announcement-title {
+            color: $header-color;
+            grid-area: announce;
+            align-self: center;
+            font-size: 22px;
+        }
+
+        .announcements {
+            border-radius: 25px;
+            background-color: $side-color;
+            display: grid;
+            grid-area: posts;
+            justify-items: center;
+            font-size: 14px;
+
+            .posts {
+                color: white;
+                width: 80%;
+                display: grid;
+                grid-template-areas:
+                    "title"
+                    "info";
+                grid-auto-rows: 1fr 4fr;
+                align-self: center;
+
+                .post-title {
+                    margin: 0;
+                }
+
+                .info {
+                    margin: 0;
+                    border-bottom: 1px solid $main-color;
+                }
+
+                .third:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        .trending-title {
+            grid-area: trending;
+            align-self: center;
+            font-size: 22px;
+            color: $header-color;
+        }
+
+        .trending {
+            background-color: $side-color;
+            grid-area: accounts;
+            border-radius: 25px;
+
+            display: grid;
+            grid-auto-rows: 1fr;
             justify-items: center;
 
-        }
-        .user-info {
-            display: grid;
-            margin: 0;
+            .users {
+                display: grid;
+                grid-template-areas: "icon info";
+                grid-template-columns: 1fr 4fr;
+                width: 80%;
+                align-items: center;
+                column-gap: 3%;
 
+                .user-bg {
+                    background-color: $alt-color;
+                    border-radius: 50%;
+                    justify-items: center;
+                    height: 5vh;
+                    width: 3vw;
+
+                    display: grid;
+                    align-content: center;
+                    justify-content: center;
+
+                }
+
+                .user-icon {
+                    width: 2vw;
+                    height: auto;
+                    align-self: center;
+                    justify-items: center;
+
+                }
+
+                .user-info {
+                    display: grid;
+                    margin: 0;
+
+                }
+
+                .user-name {
+                    font-weight: bold;
+                    margin: 0;
+                }
+
+                .info-text {
+                    margin: 0;
+                }
+            }
         }
-        .user-name {
-            font-weight: bold;
-            margin: 0;
-        }
-        .info-text {
-            margin: 0;
-        }
-      }
     }
-  }
 }
