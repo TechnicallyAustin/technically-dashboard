@@ -1,7 +1,7 @@
 $logo-width: 4vw;
 $side-icon-width: 2vw;
 $profile-icon-width: 2vw;
-$welcome-icon-width: 4vw;
+$welcome-icon-width: 3vw;
 $welcome-icon-height: 7vh;
 $header-color: #1b263b;
 $side-color: #778da9;
@@ -9,22 +9,22 @@ $main-color: #e0e1dd;
 $project-color: #0d1b2a;
 $alt-color: #415a77;
 
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
 
 body {
-    height: 100vh;
+  height: 100vh;
   display: grid;
   grid-template-areas:
     "side header"
     "side main";
-    grid-template-columns: 1fr 5fr;
-    color: white;
+  grid-template-columns: 1fr 5fr;
+  color: white;
 }
 
 .side {
-    height: 100vh;
+  height: 100vh;
   background-color: $side-color;
   grid-area: side;
 
@@ -36,7 +36,6 @@ body {
   grid-template-rows: 1fr 4fr 2fr 3fr;
   row-gap: 3vh;
   padding-top: 2%;
-
 
   .logo {
     width: 80%;
@@ -58,7 +57,7 @@ body {
     }
 
     .logo-title {
-        margin: 0;
+      margin: 0;
       color: white;
       grid-area: text;
       align-items: center;
@@ -73,14 +72,13 @@ body {
     align-items: center;
 
     .item-box {
-        width: 80%;
+      width: 80%;
       grid-column: item;
       display: grid;
       grid-template-areas: "icon text";
       grid-template-columns: 1fr 2fr;
       align-items: center;
       justify-items: center;
-      
 
       .menu-icons {
         width: $side-icon-width;
@@ -104,7 +102,6 @@ body {
     display: grid;
     grid-template-areas: "item";
     align-items: center;
-
 
     .item-box {
       grid-column: item;
@@ -135,7 +132,6 @@ body {
 .header {
   grid-area: header;
   background-color: $header-color;
-  padding: 2%;
 
   display: grid;
   grid-template-areas:
@@ -177,7 +173,7 @@ body {
     .welcome-icon-bg {
       background-color: $side-color;
       border: 2px solid $main-color;
-      width: 5vw;
+      width: 4vw;
       height: 7vh;
       border-radius: 50%;
 
@@ -279,157 +275,182 @@ body {
 }
 
 .main {
+  background-color: $main-color;
+  display: grid;
+  grid-template-areas: "project panel";
+  grid-template-columns: 7fr 3fr;
+  column-gap: 1vh;
+  padding: 2%;
+
+  .projects {
+    grid-column: project;
     background-color: $main-color;
+
     display: grid;
     grid-template-areas:
-    "project panel";
-    grid-template-columns: 7fr 3fr;
-    column-gap: 1vh;
-    padding: 2%;
+      "title title"
+      "card card";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    grid-auto-rows: 5fr;
+    row-gap: 1vh;
+    column-gap: 1vw;
+    justify-content: center;
 
-
-    .projects{
-        grid-column: project;
-        background-color: $main-color;
-
-        display: grid;
-        grid-template-areas:
-        "title title"
-        "card card";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 5fr;
-        grid-auto-rows: 5fr;
-        row-gap: 1vh;
-        column-gap: 1vw;
-        justify-content: center;
-
-
-
-
-        .project-section-title{
-            grid-area: title;
-            color: $header-color;
-            align-self: center;
-            font-size: 22px;
-        }
-
-        .project-card{
-            background-color: $project-color;
-            border-left: 15px solid rgb(207, 178, 15);
-            border-radius: 25px;
-
-
-
-
-            display: grid;
-            grid-template-areas:
-            "title"
-            "description"
-            "share";
-            grid-template-rows: 1fr 2fr 1fr;
-            align-items: center;
-
-
-
-            .project-title{
-                width: 80%;
-                margin: 0;
-                grid-row: title;
-                align-content: center;
-                justify-self: center;
-            }
-            .project-description{
-                width: 80%;
-                margin: 0;
-                grid-row: description;
-                align-self: flex-start;
-                justify-self: center;
-            }
-            .project-share{
-                grid-row: share;
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                width: 40%;
-                height: 3vh;
-                align-items: center;
-                justify-self: right;
-
-                .share-icons{
-                    height: 2vh;
-                    width: auto;
-                    align-self: center;
-                }
-            }
-        }
-        
+    .project-section-title {
+      grid-area: title;
+      color: $header-color;
+      align-self: center;
+      font-size: 22px;
     }
-    .panel{
+
+    .project-card {
+      background-color: $project-color;
+      border-left: 15px solid rgb(207, 178, 15);
+      border-radius: 25px;
+
+      display: grid;
+      grid-template-areas:
+        "title"
+        "description"
+        "share";
+      grid-template-rows: 1fr 2fr 1fr;
+      align-items: center;
+
+      .project-title {
+        width: 80%;
+        margin: 0;
+        grid-row: title;
+        align-content: center;
+        justify-self: center;
+      }
+      .project-description {
+        width: 80%;
+        margin: 0;
+        grid-row: description;
+        align-self: flex-start;
+        justify-self: center;
+      }
+      .project-share {
+        grid-row: share;
         display: grid;
-        grid-column: panel;
-        background-color: $main-color;
-        grid-template-areas:
-        "announce"
-        "posts"
-        "trending"
-        "accounts";
-        grid-template-rows: 1fr 7.5fr 1fr 7.5fr;
-        row-gap: 1vh;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 40%;
+        height: 3vh;
+        align-items: center;
+        justify-self: right;
 
-        .announcement-title{
-            color: $header-color;
-            grid-area: announce;
-            align-self: center;
-            font-size: 22px;
-
-
+        .share-icons {
+          height: 2vh;
+          width: auto;
+          align-self: center;
         }
-        .announcements{
+      }
+    }
+  }
+  .panel {
+    display: grid;
+    grid-column: panel;
+    background-color: $main-color;
+    grid-template-areas:
+      "announce"
+      "posts"
+      "trending"
+      "accounts";
+    grid-template-rows: 1fr 7.5fr 1fr 7.5fr;
+    row-gap: 1vh;
 
-            border-radius: 25px;
-            background-color: $side-color;
-            display: grid;
-            grid-area: posts;
+    .announcement-title {
+      color: $header-color;
+      grid-area: announce;
+      align-self: center;
+      font-size: 22px;
+    }
+    .announcements {
+      border-radius: 25px;
+      background-color: $side-color;
+      display: grid;
+      grid-area: posts;
+      justify-items: center;
+      font-size: 14px;
+
+      .posts {
+        color: white;
+        width: 80%;
+        display: grid;
+        grid-template-areas:
+          "title"
+          "info";
+        grid-auto-rows: 1fr 4fr;
+        align-self: center;
+
+        .post-title {
+          margin: 0;
+        }
+        .info {
+          margin: 0;
+          border-bottom: 1px solid $main-color;
+        }
+
+        .third:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+    .trending-title {
+      grid-area: trending;
+      align-self: center;
+      font-size: 22px;
+      color: $header-color;
+    }
+    .trending {
+      background-color: $side-color;
+      grid-area: accounts;
+      border-radius: 25px;
+
+      display: grid;
+      grid-auto-rows: 1fr;
+      justify-items: center;
+      .users {
+        display: grid;
+        grid-template-areas: "icon info";
+        grid-template-columns: 1fr 4fr;
+        width: 80%;
+        align-items: center;
+        column-gap: 3%;
+
+        .user-bg {
+            background-color: $alt-color;
+            border-radius: 50%;
             justify-items: center;
-            font-size: 14px;
+            height: 5vh;
+            width: 3vw;
 
-            .posts{
-                color: white;
-                width: 70%;
-                display: grid;
-                grid-template-areas: 
-                "title"
-                "info";
-                grid-auto-rows: 1fr 4fr;
-                align-self: center;
-
-
-
-                .post-title{
-                    margin: 0;
-                }
-                .info{
-                    margin: 0;
-                    border-bottom: 1px solid $main-color;
-                }
-
-                .third:last-child{
-                    border-bottom: none;
-                }
-            }
+            display: grid;
+            align-content: center;
+            justify-content: center;
 
         }
-        .trending-title{
-            grid-area: trending;
+        .user-icon {
+            width: 2vw;
+            height: auto;
             align-self: center;
-            font-size: 22px;
-            color: $header-color;
+            justify-items: center;
 
         }
-        .trending{
-            background-color: $side-color;
-            grid-area: accounts;
-            border-radius: 25px;
+        .user-info {
+            display: grid;
+            margin: 0;
+
         }
+        .user-name {
+            font-weight: bold;
+            margin: 0;
+        }
+        .info-text {
+            margin: 0;
+        }
+      }
     }
-
+  }
 }

@@ -101,7 +101,6 @@ body {
 .header {
   grid-area: header;
   background-color: #1b263b;
-  padding: 2%;
   display: grid;
   grid-template-areas: "search  profile" "welcome button";
   grid-template-columns: 6fr 3fr;
@@ -136,7 +135,7 @@ body {
 .header .welcome .welcome-icon-bg {
   background-color: #778da9;
   border: 2px solid #e0e1dd;
-  width: 5vw;
+  width: 4vw;
   height: 7vh;
   border-radius: 50%;
   display: grid;
@@ -146,7 +145,7 @@ body {
 .header .welcome .welcome-icon {
   align-items: center;
   justify-self: center;
-  width: 4vw;
+  width: 3vw;
   height: auto;
 }
 .header .welcome .welcome-message {
@@ -306,7 +305,7 @@ body {
 }
 .main .panel .announcements .posts {
   color: white;
-  width: 70%;
+  width: 80%;
   display: grid;
   grid-template-areas: "title" "info";
   grid-auto-rows: 1fr 4fr;
@@ -332,4 +331,43 @@ body {
   background-color: #778da9;
   grid-area: accounts;
   border-radius: 25px;
+  display: grid;
+  grid-auto-rows: 1fr;
+  justify-items: center;
+}
+.main .panel .trending .users {
+  display: grid;
+  grid-template-areas: "icon info";
+  grid-template-columns: 1fr 4fr;
+  width: 80%;
+  align-items: center;
+  -moz-column-gap: 3%;
+       column-gap: 3%;
+}
+.main .panel .trending .users .user-bg {
+  background-color: #415a77;
+  border-radius: 50%;
+  justify-items: center;
+  height: 5vh;
+  width: 3vw;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+.main .panel .trending .users .user-icon {
+  width: 2vw;
+  height: auto;
+  align-self: center;
+  justify-items: center;
+}
+.main .panel .trending .users .user-info {
+  display: grid;
+  margin: 0;
+}
+.main .panel .trending .users .user-name {
+  font-weight: bold;
+  margin: 0;
+}
+.main .panel .trending .users .info-text {
+  margin: 0;
 }/*# sourceMappingURL=styles.css.map */

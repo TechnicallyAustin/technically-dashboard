@@ -284,7 +284,7 @@ function dash(){
         
 
                 function content(){
-                    const userArray = ["Austin","Jada","Jordan","Dylan", "Adrian"]
+                    const userArray = ["TechnicallyAJ","Jada","Jordan","Dylan", "Adrian"]
                     for (let i = 0; i < userArray.length; i++){
                         let user = userArray[i]
                         let container = trending.appendChild(document.createElement("div"))
@@ -295,8 +295,8 @@ function dash(){
 
                         let icon = iconBg.appendChild(document.createElement("img"))
                         icon.setAttribute("class", "user-icon")
-                        icon.setAttribute("src", "");
-                        icon.setAttribute("alt", "icon for the users profile");
+                        icon.setAttribute("src", "./assets_v2/alt-user.svg");
+                        icon.setAttribute("alt", "icon users profile");
 
                         let userBox = container.appendChild(document.createElement("div"))
                         userBox.setAttribute("class", "user-info")
@@ -307,9 +307,7 @@ function dash(){
 
                         let info = userBox.appendChild(document.createElement("p"));
                         info.setAttribute("class", "info-text");
-                        info.textContent = "Lorem ipsum etoch iglooe haggle"
-
-
+                        info.textContent = "Lorem ipsum Lorem ipsum lorem"
                     }
 
                 }; content()
