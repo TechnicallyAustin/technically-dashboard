@@ -236,37 +236,56 @@ function dash(){
             const panel = main.appendChild(document.createElement("div"));
             panel.setAttribute("class", "panel")
 
+                function title() {
+                  const title = panel.appendChild(document.createElement("h3"));
+                  title.setAttribute("class", "announcement-title");
+                  title.textContent = "Announcements";
+                }
+
+                title();
+
             function announcements(){
                 const announcements = panel.appendChild(document.createElement("div"));
                 announcements.setAttribute("class", "announcements");
 
-                function title(){  
-                    const title = panel.appendChild(document.createElement("h3"));
-                    title.setAttribute("class", "announcement-title");
-                    title.textContent = "Announcements"
-                }; title()
+            
 
                   function post() {
                     const postArray = ["First", "Second", "Third"];
                     for (let i = 0; i < postArray.length; i++){
                         let post = postArray[i]
-                        let item = announcements.appendChild(document.createElement("h4"));
-                        item.setAttribute("class", `${post.toLowerCase()}`)
+
+                        let container = announcements.appendChild(document.createElement("div"));
+                        container.setAttribute("class", `${post.toLowerCase()}-container posts`);
+
+                        let item = container.appendChild(document.createElement("h4"));
+                        item.setAttribute("class", `${post.toLowerCase()} post-title`)
                         item.textContent = post
+
+                        let info = container.appendChild(document.createElement("p"));
+                        info.setAttribute("class", `${post.toLowerCase()} info`)
+                        info.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
+
                     }
                   }; post()
 
             }; announcements()
 
+                function trendingTitle(){
+                    const title = panel.appendChild(document.createElement("h3"));
+                    title.setAttribute("class", "trending-title");
+                    title.textContent = "Trending"
+                }; trendingTitle()
+
             function trending(){
                 const trending = panel.appendChild(document.createElement("div"));
                 trending.setAttribute("class", "trending");
 
-                function title(){
-                    const title = panel.appendChild(document.createElement("h3"));
-                    title.setAttribute("class", "trending-title");
-                    title.textContent = "Trending"
-                }; title()
+        
+
+                function content(){
+
+                }
 
 
 

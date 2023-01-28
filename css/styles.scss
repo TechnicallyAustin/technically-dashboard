@@ -376,7 +376,39 @@ body {
             
             border-radius: 25px;
             grid-row: top;
-            padding: 8%
+            padding: 8%;
+
+            display: grid;
+            grid-auto-rows: 1fr 1fr 1fr;
+
+            .posts{
+                display: grid;
+                grid-template-areas:
+                "title"
+                "info";
+                grid-template-rows: 1fr auto-fit;
+                
+                align-items: center;
+                justify-content: center;
+
+
+                .post-title{
+                    margin: 1%;
+                    font-weight: bold;
+                    align-self: center;
+                    justify-self: left;
+                }
+                .info{
+                    border-bottom: 1px solid $main-color;
+                    align-self: center;
+                    justify-self: center;
+                    padding: 1%;
+                }
+            }
+
+
+
+
             
 
         }
