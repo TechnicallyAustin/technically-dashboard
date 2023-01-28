@@ -104,7 +104,6 @@ body {
   display: grid;
   grid-template-areas: "search  profile" "welcome button";
   grid-template-columns: 6fr 3fr;
-  row-gap: 1vh;
 }
 .header .search {
   display: grid;
