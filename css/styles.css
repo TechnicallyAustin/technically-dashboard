@@ -10,12 +10,14 @@ body {
   display: grid;
   grid-template-areas: "logo" "menu" "option";
   grid-template-rows: 1fr 4fr 2fr 6fr;
-  row-gap: 2%;
+  row-gap: 4%;
 }
 .side .logo {
+  width: 80%;
   grid-area: logo;
   display: grid;
   grid-template-areas: "image text";
+  grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-content: center;
 }
@@ -26,6 +28,7 @@ body {
   justify-self: center;
 }
 .side .logo .logo-title {
+  margin: 0;
   color: white;
   grid-area: text;
   align-items: center;
@@ -38,12 +41,12 @@ body {
   align-items: center;
 }
 .side .menu .item-box {
+  width: 80%;
   grid-column: item;
   display: grid;
   grid-template-areas: "icon text";
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
-  justify-content: center;
 }
 .side .menu .item-box .menu-icons {
   width: 2vw;
@@ -58,6 +61,7 @@ body {
   justify-self: left;
 }
 .side .options {
+  width: 80%;
   grid-area: option;
   display: grid;
   grid-template-areas: "item";
@@ -67,7 +71,7 @@ body {
   grid-column: item;
   display: grid;
   grid-template-areas: "icon text";
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-content: center;
 }
@@ -81,7 +85,7 @@ body {
   color: white;
   grid-column: text;
   align-items: center;
-  justify-content: left;
+  justify-self: left;
 }
 
 .header {
@@ -91,6 +95,7 @@ body {
   display: grid;
   grid-template-areas: "search  profile" "welcome button";
   grid-template-columns: 6fr 3fr;
+  row-gap: 2vh;
 }
 .header .search {
   display: grid;
@@ -121,7 +126,7 @@ body {
 .header .welcome .welcome-icon-bg {
   background-color: #778da9;
   border: 2px solid #e0e1dd;
-  width: 6vw;
+  width: 5vw;
   height: 7vh;
   border-radius: 50%;
   display: grid;

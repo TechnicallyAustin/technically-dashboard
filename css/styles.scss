@@ -33,24 +33,28 @@ body {
     "menu"
     "option";
   grid-template-rows: 1fr 4fr 2fr 6fr;
-  row-gap: 2%;
+  row-gap: 4%;
 
   .logo {
+    width: 80%;
     grid-area: logo;
 
     display: grid;
     grid-template-areas: "image text";
+    grid-template-columns: 1fr 2fr;
     align-items: center;
     justify-content: center;
 
     .logo-image {
       width: $logo-width;
       grid-area: image;
+
       align-items: center;
       justify-self: center;
     }
 
     .logo-title {
+        margin: 0;
       color: white;
       grid-area: text;
       align-items: center;
@@ -65,12 +69,13 @@ body {
     align-items: center;
 
     .item-box {
+        width: 80%;
       grid-column: item;
       display: grid;
       grid-template-areas: "icon text";
-      grid-template-columns: 1fr 4fr;
+      grid-template-columns: 1fr 2fr;
       align-items: center;
-      justify-content: center;
+      
 
       .menu-icons {
         width: $side-icon-width;
@@ -89,16 +94,18 @@ body {
   }
 
   .options {
+    width: 80%;
     grid-area: option;
     display: grid;
     grid-template-areas: "item";
     align-items: center;
 
+
     .item-box {
       grid-column: item;
       display: grid;
       grid-template-areas: "icon text";
-      grid-template-columns: 1fr 4fr;
+      grid-template-columns: 1fr 2fr;
       align-items: center;
       justify-content: center;
 
@@ -114,7 +121,7 @@ body {
         color: white;
         grid-column: text;
         align-items: center;
-        justify-content: left;
+        justify-self: left;
       }
     }
   }
@@ -130,6 +137,7 @@ body {
     "search  profile"
     "welcome button";
   grid-template-columns: 6fr 3fr;
+  row-gap: 2vh;
 
   .search {
     display: grid;
@@ -164,8 +172,8 @@ body {
     .welcome-icon-bg {
       background-color: $side-color;
       border: 2px solid $main-color;
-      width: $logo-width;
-      height: $welcome-icon-height;
+      width: 5vw;
+      height: 7vh;
       border-radius: 50%;
 
       display: grid;
@@ -266,4 +274,5 @@ body {
 }
 
 .main {
+    
 }
